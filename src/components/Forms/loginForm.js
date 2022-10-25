@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { LabelForm, BtnForm } from './styles';
 
 // Formulario con componente de clase
 class LoginForm extends React.Component {
@@ -36,17 +36,17 @@ class LoginForm extends React.Component {
     <div className="LoginForm">
       <form onSubmit={handleFormSubmit}>
         <h2>Iniciar sesión</h2>
-        <label>
+        <LabelForm>
           Correo
-          <input type="email" value={email} onChange={this.handleEmailChange}/>
-        </label>
-        <label>
+          <input type="email" className="col-12" value={email} onChange={this.handleEmailChange}/>
+        </LabelForm>
+        <LabelForm>
           Constraseña
-          <input type="password" value={password} onChange={this.handlePasswordChange}/>
-        </label>
-        <button type="submit">
+          <input type="password" className="col-12" value={password} onChange={this.handlePasswordChange}/>
+        </LabelForm>
+        <BtnForm type="submit">
           Enter
-        </button>
+        </BtnForm>
       </form>
     </div>
     );
