@@ -2,7 +2,7 @@ import React from 'react';
 
 
 // Formulario con componente de clase
-class OtroLogin extends React.Component {
+class LoginForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -33,7 +33,7 @@ class OtroLogin extends React.Component {
     }
 
     return(
-    <div className="OtroLogin">
+    <div className="LoginForm">
       <form onSubmit={handleFormSubmit}>
         <h2>Iniciar sesión</h2>
         <label>
@@ -53,4 +53,4 @@ class OtroLogin extends React.Component {
   }
 }
 
-export default OtroLogin;
+export default LoginForm;

@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App';
-import Login from './pages/login.js'
 
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('login'));
+const root = ReactDOM.createRoot(document.getElementById('app'));
 root.render(
   <React.StrictMode>
-    <Login/>
+    <App/>
   </React.StrictMode>
 );
 
