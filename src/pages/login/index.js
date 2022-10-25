@@ -2,12 +2,12 @@ import React from "react";
 import LoginForm from "../../components/Forms/loginForm";
 import {
   Container,
-  Row,
+  /*Row,
   Col,
-  Card,
+  Card,*/
   CardImg,
-  CardTitle,
-  CardBody
+  /*CardTitle,
+  CardBody*/
 } from 'reactstrap';
 
 import { ContenedorLogin } from "./styles";
@@ -17,7 +17,7 @@ import logo from "../../res/logo.png"
 function Login(){
 
   return(
-    <ContenedorLogin fluid className="col-l-12 col-s-4 my-5 ">
+    <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5 ">
       <Container className="d-flex flex-row justify-content-center">
         <CardImg
           alt="Card image cap"
@@ -30,15 +30,12 @@ function Login(){
           }
           width="100%"/>
       </Container>
-      <Container className="d-flex flex-row justify-content-center">
-      <LoginForm onLogin={(email, password)=>{
+      <Container className="d-flex flex-row justify-content-center col-12">
+        <LoginForm onLogin={(email, password)=>{
           console.log(`${email}, ${password}`);
         }}></LoginForm>
       </Container>
     </ContenedorLogin>
-
-
-
   );
 }
 
