@@ -1,5 +1,16 @@
 import React from "react";
 import LoginForm from "../components/Forms/loginForm";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardImg,
+  CardTitle,
+  CardBody
+} from 'reactstrap';
+
+import logo from "./../res/logo.png"
 
 function Login(){
 
