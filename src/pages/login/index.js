@@ -1,6 +1,7 @@
 import React from "react";
 import LoginForm from "../../components/Forms/loginForm";
 import Footer from "../../components/PageComponentes/Footer";
+
 import {
   Container,
   /*Row,
@@ -31,12 +32,15 @@ function Login(){
           }
           width="100%"/>
       </Container>
+
       <Container className="d-flex flex-row justify-content-center col-12">
         <LoginForm onLogin={(email, password)=>{
           console.log(`${email}, ${password}`);
         }}></LoginForm>
       </Container>
+
       <Footer></Footer>
+
     </ContenedorLogin>
 
   );
