@@ -1,4 +1,4 @@
-import { format } from "prettier";
+//import { format } from "prettier";
 import React from "react";
 import { FooterComp, TopNav, TopNavLink } from "./styles";
 

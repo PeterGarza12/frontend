@@ -1,6 +1,7 @@
 import React from "react";
+import { View } from "../view/view";
 import LoginForm from "../../components/Forms/loginForm";
-import Footer from "../../components/PageComponentes/Footer";
+//import Footer from "../../components/PageComponentes/Footer";
 
 import {
   Container,
@@ -13,35 +14,35 @@ import {
 } from 'reactstrap';
 
 import { ContenedorLogin } from "./styles";
-
 import logo from "../../res/logo.png"
 
 function Login(){
 
   return(
-    <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >
-      <Container className="d-flex flex-row justify-content-center">
-        <CardImg
-          alt="Card image cap"
-          src={logo}
-          style={
-            {
-              width: 211,
-              height: 53
+    <View banner= {'Prueba'} header = {'Header'} >
+      <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >
+        <Container className="d-flex flex-row justify-content-center">
+          <CardImg
+            alt="Card image cap"
+            src={logo}
+            style={
+              {
+                width: 211,
+                height: 53
+              }
             }
-          }
-          width="100%"/>
-      </Container>
+            width="100%"/>
+        </Container>
 
-      <Container className="d-flex flex-row justify-content-center col-12">
-        <LoginForm onLogin={(email, password)=>{
-          console.log(`${email}, ${password}`);
-        }}></LoginForm>
-      </Container>
+        <Container className="d-flex flex-row justify-content-center col-12">
+          <LoginForm onLogin={(email, password)=>{
+            console.log(`${email}, ${password}`);
+          }}></LoginForm>
+        </Container>
 
-      <Footer></Footer>
+      </ContenedorLogin>
+    </View>
 
-    </ContenedorLogin>
 
   );
 }
