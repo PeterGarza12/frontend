@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
     return(
     <div className="LoginForm col-10">
       <form onSubmit={handleFormSubmit}>
-        <h2>Iniciar sesión</h2>
+        <h1>¡Bienvenido!</h1>
         <LabelForm>
           Correo
           <Proof type="email" className="col-12" value={email} onChange={this.handleEmailChange}/>

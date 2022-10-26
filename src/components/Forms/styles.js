@@ -4,8 +4,9 @@ export const LabelForm = styled.label`
 display: block;
 font-size: 16px;
 color: black;
-margin-top: 15px;
+margin-top: 35px;
 margin-bottom: 15px;
+text-align: left;
 `;
 
 export const BtnForm = styled.button`
@@ -16,8 +17,8 @@ text-decoration: none;
 text-align: center;
 padding: 7px 13px;
 background: transparent;
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 40px;
+margin-bottom: 40px;
 width: 100%;
 
 &:hover{
@@ -34,6 +35,7 @@ width: 100%;
 export const Proof = styled.input`
 border: none;
 border-bottom: 1px solid black;
+margin-top: 20px;
 
 &:hover, &:focus{
   outline: none;
