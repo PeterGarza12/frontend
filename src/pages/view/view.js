@@ -1,7 +1,15 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Content } from "../Content/content";
+import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
+
+const navbaritems = [
+  {
+    text: 'Inicio',
+    link: '/',
+  }
+];
 
 export const View = (props) => {
 
@@ -10,7 +18,7 @@ export const View = (props) => {
       <Row>
         {
           props.header === 'Header' ? (
-            <h1>Aquí iría el header</h1>
+            <Header theme={props.theme} items={navbaritems}></Header>
           ) : (
             <div></div>
           )
