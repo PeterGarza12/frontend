@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "../view/view";
-import LoginForm from "../../components/Forms/loginForm";
+import RegisterForm from "../../components/Forms/registerForm";
 
 import { useNavigate } from "react-router-dom";
 //import Footer from "../../components/PageComponentes/Footer";
@@ -15,10 +15,10 @@ import {
   CardBody*/
 } from 'reactstrap';
 
-import { BtnLink, ContenedorLogin } from "./styles";
+import { ContenedorLogin, BtnLink } from "../login/styles";
 import logo from "../../res/logo.png"
 
-function Login(){
+function Register(){
   let nav = useNavigate();
 
   return(
@@ -38,13 +38,13 @@ function Login(){
         </Container>
 
         <Container className="d-flex flex-row justify-content-center col-12">
-          <LoginForm onLogin={(email, password)=>{
-            alert(`${email}, ${password}`);
-          }}></LoginForm>
+          <RegisterForm onRegister={(username, email, password, phone)=>{
+            alert(`${username}, ${email}, ${password}, ${phone}`);
+          }}></RegisterForm>
         </Container>
         <BtnLink onClick={()=>{
-          nav("/register")
-        }}>¿No tienes cuenta? Regístrate</BtnLink>
+          nav("/")
+        }}>¿Ya tienes una cuenta? Inicia sesión</BtnLink>
       </ContenedorLogin>
     </View>
 
@@ -52,4 +52,4 @@ function Login(){
   );
 }
 
-export default Login;
+export default Register;

@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Login from './pages/login/index';
+import Register from './pages/register';
 import Error404 from './pages/404/index'
 
 import './App.css';
@@ -12,8 +13,9 @@ function App() {
     <div className="App d-flex justify-content-center">
       <Router>
         <Routes>
-          <Route exact path="/" element={<Login/>}></Route>
-          <Route path="*" element={<Error404/>}></Route>
+          <Route exact path="/"         element={<Login/>}>   </Route>
+          <Route exact path="/register" element={<Register/>}></Route>
+          <Route path="*"               element={<Error404/>}></Route>
         </Routes>
       </Router>
     </div>
