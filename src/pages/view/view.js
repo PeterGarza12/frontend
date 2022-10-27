@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Content } from "../Content/content";
 import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
+import { RowAfterHeader } from "./styles";
 
 const navbaritems = [
   {
@@ -18,13 +19,13 @@ export const View = (props) => {
       <Row>
         {
           props.header === 'Header' ? (
-            <Header theme={props.theme} items={navbaritems}></Header>
+            <Header theme={props.theme} items={navbaritems} logged ={props.logged}></Header>
           ) : (
             <div></div>
           )
         }
       </Row>
-      <Row>
+      <RowAfterHeader>
         <Col className="col-12" >
           {
             props.banner === 'Prueba' ? (
@@ -35,7 +36,7 @@ export const View = (props) => {
           }
           <Content>{props.children}</Content>
         </Col>
-      </Row>
+      </RowAfterHeader>
       <Footer></Footer>
     </Container>
   );
