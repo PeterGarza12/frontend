@@ -1,25 +1,25 @@
-import React from "react";
-import { View } from "../view/view";
-import { MainTheme } from "../../utils/colors";
-
-import {
-  Container,
-  /*Row,
-  Col,
-  Card,*/
-  CardImg,
-  /*CardTitle,
-  CardBody*/
-} from 'reactstrap';
-
-
-function Test(){
-
-  return(
-    <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
-      <h1>Página para hacer pruebas de lo que vayamos creando</h1>
-    </View>
+import ImageSlider from "./ImageSlider";
+const App = () => {
+  const slides = [
+    { url: "http://localhost:3000/image-1.jpg", title: "carne" },
+    { url: "http://localhost:3000/image-2.jpeg", title: "carne" },
+    { url: "http://localhost:3000/image-3.jpeg", title: "carne" },
+    { url: "http://localhost:3000/image-4.jpeg", title: "carne" },
+    { url: "http://localhost:3000/image-5.jpeg", title: "carne" },
+  ];
+  const containerStyles = {
+    width: "500px",
+    height: "280px",
+    margin: "0 auto",
+  };
+  return (
+    <div>
+      <h1>Monterrey BBQ</h1>
+      <div style={containerStyles}>
+        <ImageSlider slides={slides} />
+      </div>
+    </div>
   );
-}
+};
 
-export default Test;
+export default App;
