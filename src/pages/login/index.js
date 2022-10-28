@@ -48,8 +48,6 @@ function Login(){
         }}>¿No tienes cuenta? Regístrate</BtnLink>
       </ContenedorLogin>
     </View>
-
-
   );
 }
 
