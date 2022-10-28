@@ -1,6 +1,7 @@
 import React from "react";
 import { View } from "../view/view";
 import LoginForm from "../../components/Forms/loginForm";
+import { LoginTheme } from "../../utils/colors";
 
 import { useNavigate } from "react-router-dom";
 //import Footer from "../../components/PageComponentes/Footer";
@@ -22,7 +23,7 @@ function Login(){
   let nav = useNavigate();
 
   return(
-    <View banner= {'Prueba'} header = {'Header'} logged = {false} >
+    <View banner= {'Prueba'} header = {'Header'} logged = {false} theme={LoginTheme} >
       <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >
         <Container className="d-flex flex-row justify-content-center">
           <CardImg

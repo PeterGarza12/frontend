@@ -3,7 +3,8 @@ import { Container, Row, Col } from "reactstrap";
 import { Content } from "../Content/content";
 import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
-import { RowAfterHeader } from "./styles";
+import { MainContainer, RowAfterHeader } from "./styles";
+import { pageColors } from "../../utils/colors";
 
 const navbaritems = [
   {
@@ -15,7 +16,7 @@ const navbaritems = [
 export const View = (props) => {
 
   return(
-    <Container fluid>
+    <MainContainer bgImg = {pageColors[props.theme].backgroundImg} fluid >
       <Row>
         {
           props.header === 'Header' ? (
@@ -38,6 +39,6 @@ export const View = (props) => {
         </Col>
       </RowAfterHeader>
       <Footer></Footer>
-    </Container>
+    </MainContainer>
   );
 };
