@@ -1,31 +1,49 @@
 import React from "react";
 import { ContainerMenu } from "./styles";
 import { H3Prueba } from "./styles";
+import imgTacos from "../../../res/tacos.png";
+import imgHamburguesas from "../../../res/hamburguesa.jpg";
+import imgPizzas from "../../../res/pizzas.jpg";
+import imgBebidas from "../../../res/bebidas.jpg";
+import { ListOfCategories } from "./listOfCategories";
 
-class Menu extends React.Component {
+
+const listCategories =(
+  <ListOfCategories
+    categories={
+      [
+        {
+          name: 'TACOS',
+          image: imgTacos,
+        },
+        {
+          name: 'HAMBURGUESAS',
+          image: imgHamburguesas,
+        },
+        {
+          name: 'PIZZAS',
+          image: imgPizzas,
+        },
+        {
+          name: 'BEBIDAS',
+          image: imgBebidas,
+        },
+      ]
+    }
+  />
+);
+
+class MenuC extends React.Component {
 
   render(){
     return(
-      <ContainerMenu className="d-flex justify-content-center">
-
-          <H3Prueba >NUESTRO MENÚ</H3Prueba>
-          <div className="col-sm">
-          Categoría 1
-          </div>
-          <div className="col-sm">
-          Categoría 2
-          </div>
-          <div className="col-sm">
-          Categoría 3
-          </div>
-          <div className="col-sm">
-          Categoría 4
-          </div>
-
+      <ContainerMenu className="d-flex justify-content-left">
+          <H3Prueba className="col-sm-2">MENÚ</H3Prueba>
+          <div className="col-sm-9">{listCategories}</div>
       </ContainerMenu>
 
     );
   }
 }
 
-export default Menu;
+export default MenuC;
