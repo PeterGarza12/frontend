@@ -14,16 +14,18 @@ import logo from "../../../res/logo.png"
 
 export const Header = ({ theme, items, logged, searchbar }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const showDropdown = (e)=>{
     setDropdownOpen(!dropdownOpen);
   }
+
   const hideDropdown = e => {
     setDropdownOpen(false);
   }
+
   return (
     <HeaderComp>
     <TopNav>
-
       <Container fluid>
         <Row className='d-flex justify-content-around'>
           <Col md="10" className='d-flex align-items-center float-left'>
