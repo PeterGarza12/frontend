@@ -16,7 +16,8 @@ const navbaritems = [
 export const View = (props) => {
 
   return(
-    <MainContainer bgImg = {pageColors[props.theme].backgroundImg} fluid >
+
+    <MainContainer bgImg = {pageColors[props.theme].bgImg} fluid >
       <Row>
         {
           props.header === 'Header' ? (

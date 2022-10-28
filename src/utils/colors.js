@@ -3,6 +3,6 @@ export const LoginTheme = 'Login';
 
 export const pageColors = {
   Login: {
-    backgroundImg: bgCarne
+    bgImg: bgCarne,
   }
 };
