@@ -8,7 +8,7 @@ color: white;
 padding-top: 20px;
 padding-bottom: 20px;
 padding-right: 0px;
-margin-top: 20px;
+margin-top: 40px;
 font-variant-caps: all-small-caps;
 margin-bottom: 20px;
 `;

@@ -11,7 +11,7 @@ const Slider = () => {
   ];
 
   const containerStyles = {
-    width: "1600px",
+    width: "1500px",
     height: "600px",
     margin: "0 auto",
   };
