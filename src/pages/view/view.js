@@ -31,7 +31,7 @@ export const View = (props) => {
           <Col className="col-12" >
             {
               props.banner === 'Prueba' ? (
-                <h3>Aquí iría algún elemento extra como un anuncio o algo así dependiendo en cuál página estemos</h3>
+                <h3>Bienvenido a tu perfil de usuario</h3>
               ) : (
                 <div></div>
               )

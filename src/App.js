@@ -4,6 +4,7 @@ import Login    from './pages/login/index';
 import Register from './pages/register';
 import Test     from './pages/test/test';
 import Error404 from './pages/404/index'
+import Profile from './pages/profile';
 
 import './App.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/"         element={<Login/>}>   </Route>
           <Route exact path="/register" element={<Register/>}></Route>
+          <Route exact path="/profile" element={<Profile/>}></Route>
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route path="*"               element={<Error404/>}></Route>
         </Routes>
