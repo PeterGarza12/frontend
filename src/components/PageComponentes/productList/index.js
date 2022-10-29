@@ -1,6 +1,6 @@
 import 'regenerator-runtime/runtime';
 import React, { Component } from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import { Col } from 'reactstrap';
 import { Product } from '../productCard';
 import { DetailCont, ImgContainer, ListContainer, ListImg, ListTitle, ListTitleBottom, ProductLister, TitleContainer } from './styles';
 import listimg from "../../../res/hero.png"

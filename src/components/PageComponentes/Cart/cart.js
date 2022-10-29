@@ -1,10 +1,12 @@
 import React from "react";
-import { H3Prueba } from "./styles";
+import { TitleCart } from "./styles";
 import imgTacos from "../../../res/tacos.png";
 import imgHamburguesas from "../../../res/hamburguesa.jpg";
 import imgPizzas from "../../../res/pizzas.jpg";
 import imgBebidas from "../../../res/bebidas.jpg";
 import { ListOfCart } from "./listOfCart";
+
+import { ContainerCart } from "./styles";
 
 
 const listCart =(
@@ -40,11 +42,14 @@ class CartC extends React.Component {
 
   render(){
     return(
-      <div className="Aquí está lo del carrito">
-          <H3Prueba className="col-sm-2">CARRITO</H3Prueba>
-          <div className="col-sm-9">{listCart}</div>
-      </div>
+      <ContainerCart className="Aquí está lo del carrito col-10">
+        <TitleCart>CARRITO</TitleCart>
+        <div className="d-flex flex-row">
+        <div className="d-flex flex-column col-8 col-md-8">{listCart}</div>
+        <div>TOTAL</div>
+        </div>
 
+      </ContainerCart>
     );
   }
 }

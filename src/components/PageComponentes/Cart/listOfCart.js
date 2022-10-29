@@ -14,16 +14,12 @@ export class ListOfCart extends React.Component {
     var productscart = this.state.productscart || [];
 
     return (
-      <div className='d-flex flex-row'>
-          {
-            productscart.map((x, i) => (
-              <div className='col col-sm' key={i}>
-                <ProductCart image={x.image} {...x}></ProductCart>
-              </div>
-              )
-            )
-          }
-      </div>
+      productscart.map((x, i) => (
+        <div className='col col-sm' key={i}>
+          <ProductCart image={x.image} {...x}></ProductCart>
+        </div>
+        )
+      )
     );
   }
 }

@@ -1,15 +1,20 @@
 import React from 'react';
 import {
-  CategoryCard,
-  CategoryImage,
-  CategoryTitle,
+  CartCard,
+  CartProductImage,
+  CartProductInfo,
+  CartProductTitle,
 } from './styles';
 
-export const ProductCart = ({ name, image }) => {
+export const ProductCart = ({ name, image, price }) => {
   return (
-    <CategoryCard>
-      <CategoryImage src={image}></CategoryImage>
-      <CategoryTitle>{name}</CategoryTitle>
-    </CategoryCard>
+    <CartCard>
+      <CartProductImage  src={image}></CartProductImage>
+      <CartProductInfo className='d-flex flex-column LAINFO'>
+        <CartProductTitle >{name}</CartProductTitle>
+        <div>{price}</div>
+        <div>BOTONES</div>
+      </CartProductInfo>
+    </CartCard>
   );
 };

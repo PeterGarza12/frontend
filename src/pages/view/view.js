@@ -3,7 +3,7 @@ import {Row, Col } from "reactstrap";
 //import { Content } from "../Content/content";
 import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
-import { MainContainer, ColAfterHeader, RowFooter } from "./styles";
+import { MainContainer, RowAfterHeader, RowFooter } from "./styles";
 import { pageColors } from "../../utils/colors";
 
 const navbaritems = [
@@ -27,7 +27,7 @@ export const View = (props) => {
         }
       </Row>
 
-      <ColAfterHeader className="Col after header">
+      <RowAfterHeader className="Col after header">
         {
           props.banner === 'Prueba' ? (
             <h3>Aquí iría algún elemento extra como un anuncio o algo así dependiendo en cuál página estemos</h3>
@@ -36,9 +36,9 @@ export const View = (props) => {
           )
         }
         <div className='d-flex flex-column align-items-center justify-content-center'>{props.children}</div>
-      </ColAfterHeader>
+      </RowAfterHeader>
 
-      <RowFooter className="Row del footer">
+      <RowFooter>
         <Footer></Footer>
       </RowFooter>
 

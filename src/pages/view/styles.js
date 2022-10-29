@@ -14,12 +14,11 @@ export const MainContainer = styled(Container)`
 `;
 
 
-export const ColAfterHeader = styled(Row)`
+export const RowAfterHeader = styled(Row)`
 margin-top: 55px;
 `;
 
 
 export const RowFooter = styled(Row)`
 margin-top: auto;
-width: 100wh;
 `;

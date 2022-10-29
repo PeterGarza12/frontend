@@ -1,72 +1,46 @@
 import styled from "styled-components";
-import { Container } from "reactstrap";
 
-export const ContainerMenu = styled(Container)`
-height: 300px;
-background-color: #753232;
-color: white;
-padding-top: 20px;
-padding-bottom: 20px;
-padding-right: 0px;
-margin-top: 40px;
+export const ContainerCart = styled.div`
+display: flex;
+flex-direction: column;
+color: black;
 font-variant-caps: all-small-caps;
-margin-bottom: 20px;
 `;
 
-export const H3Prueba = styled.div`
+export const TitleCart = styled.div`
 font-size: 38px;
 font-weight: bold;
-padding-top: 80px;
-transition: all 300ms ease;
-&:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-
-}
+padding-top: 30px;
+border-bottom: 1px solid gray;
+text-align: left;
 `;
 
 //Estilos para la carta de la categoría en sí
-export const CategoryCard = styled.div`
-background-color: white;
-border-radius: 9px;
-box-shadow: 0  0 10px 0 gray;
+export const CartCard = styled.div`
+border: none;
+margin-top: 20px;
 padding: 10px;
-margin-right: 0px;
-margin-left: 40px;
 transition: all 300ms ease;
-
-&:hover{
-  cursor: pointer;
-  transform: scale(1.04);
-  transition-timing-function: linear;
-}
-
-&:hover img{
-  opacity: 0.8;
-}
-
-&:hover div{
-  color: #971e1e;
-}
+border-bottom: 1px solid #d2d2d2;
+display: flex;
+flex-direction: row;
+justify-content: start;
 `;
 
-export const CategoryImage = styled.img`
+export const CartProductInfo = styled.div`
+margin-left: 10px;
+align-items: flex-start;
+`;
+
+export const CartProductImage = styled.img`
 width: 190px;
 height: 120px;
 margin-top: 10px;
-border-radius: 9px 9px 0px 0px;
-transition: all 300ms ease;
-
+border-radius: 9px 0px 0px 9px;
 `;
 
-export const CategoryTitle = styled.div`
+export const CartProductTitle = styled.div`
 font-size: 25px;
 font-weight: bold;
 color: black;
-margin-bottom: 10px;
-border-top: 1px solid #d2d2d2;
-padding-top: 10px;
-margin-top: 5px;
-transition: all 300ms ease;
-
 `;
