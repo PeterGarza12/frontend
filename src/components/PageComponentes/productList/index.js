@@ -25,7 +25,7 @@ export class ListOfProducts extends Component {
             <ListTitleBottom >POPULARES</ListTitleBottom>
           </TitleContainer>
           <ImgContainer className="d-none d-lg-flex">
-          <ListImg src={listimg} width={300} height={300}></ListImg>
+            <ListImg src={listimg} width={300} height={300}></ListImg>
 
           </ImgContainer>
         </DetailCont>

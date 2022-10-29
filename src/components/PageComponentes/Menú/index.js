@@ -37,7 +37,7 @@ class MenuC extends React.Component {
 
   render(){
     return(
-      <ContainerMenu className="d-flex justify-content-left">
+      <ContainerMenu className="d-flex">
           <H3Prueba className="col-sm-2">MENÚ</H3Prueba>
           <div className="col-sm-9">{listCategories}</div>
       </ContainerMenu>

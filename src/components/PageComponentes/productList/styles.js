@@ -12,6 +12,7 @@ export const ListContainer = styled.div`
   margin-top: 20px;
   justify-content: space-between;
   margin-bottom: 200px;
+  width: 100%;
 `;
 
 export const ListTitle = styled.span`

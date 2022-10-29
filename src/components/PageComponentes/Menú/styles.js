@@ -9,6 +9,7 @@ padding-bottom: 20px;
 padding-right: 0px;
 border-radius: 9px 9px 0 0;
 margin-top: 20px;
+
 `;
 
 export const H3Prueba = styled.div`

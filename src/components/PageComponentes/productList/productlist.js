@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from 'reactstrap';
 import { ListOfProducts } from ".";
 
 const listProducts = (
@@ -44,7 +43,7 @@ class ListProductsComponent extends React.Component {
 
   render(){
     return(
-      <Container fluid>{listProducts}</Container>
+      <div className="d-flex" fluid>{listProducts}</div>
     );
   }
 }
