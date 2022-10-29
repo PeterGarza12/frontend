@@ -1,9 +1,6 @@
 import React from "react";
 import { TitleCart } from "./styles";
-import imgTacos from "../../../res/tacos.png";
-import imgHamburguesas from "../../../res/hamburguesa.jpg";
-import imgPizzas from "../../../res/pizzas.jpg";
-import imgBebidas from "../../../res/bebidas.jpg";
+import imgArrachera from "../../../res/arrachera.jpg";
 import { ListOfCart } from "./listOfCart";
 
 import { ContainerCart } from "./styles";
@@ -14,24 +11,24 @@ const listCart =(
     productscart={
       [
         {
-          name: 'TACOS',
-          image: imgTacos,
-          price: '85.00'
+          name: 'Arrachera 1kg',
+          image: imgArrachera,
+          price: '$205.00'
         },
         {
-          name: 'HAMBURGUESAS',
-          image: imgHamburguesas,
-          price: '85.00'
+          name: 'Tortillas 1kg',
+          image: imgArrachera,
+          price: '$45.00'
         },
         {
-          name: 'PIZZAS',
-          image: imgPizzas,
-          price: '85.00'
+          name: 'Cerveza media',
+          image: imgArrachera,
+          price: '$50.00'
         },
         {
-          name: 'BEBIDAS',
-          image: imgBebidas,
-          price: '85.00'
+          name: 'T-bone 1kg',
+          image: imgArrachera,
+          price: '185.00'
         },
       ]
     }

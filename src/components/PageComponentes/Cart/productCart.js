@@ -13,7 +13,10 @@ export const ProductCart = ({ name, image, price }) => {
       <CartProductInfo className='d-flex flex-column LAINFO'>
         <CartProductTitle >{name}</CartProductTitle>
         <div>{price}</div>
-        <div>BOTONES</div>
+        <div className='d-flex flex-row'>
+          <button>Eliminar producto</button>
+          <button>Agregar producto</button>
+        </div>
       </CartProductInfo>
     </CartCard>
   );

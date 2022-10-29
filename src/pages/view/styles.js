@@ -15,7 +15,7 @@ export const MainContainer = styled(Container)`
 
 
 export const RowAfterHeader = styled(Row)`
-margin-top: 55px;
+margin-top: 70px;
 `;
 
 
