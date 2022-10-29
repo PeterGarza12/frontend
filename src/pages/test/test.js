@@ -8,8 +8,8 @@ const App = () => {
     { url: "http://localhost:3000/image-5.jpeg", title: "carne" },
   ];
   const containerStyles = {
-    width: "500px",
-    height: "280px",
+    width: "1600px",
+    height: "600px",
     margin: "0 auto",
   };
   return (
