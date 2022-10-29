@@ -44,7 +44,7 @@ function Register(){
           }}></RegisterForm>
         </Container>
         <BtnLink onClick={()=>{
-          nav("/")
+          nav("/login")
         }}>¿Ya tienes una cuenta? Inicia sesión</BtnLink>
       </ContenedorLogin>
     </View>

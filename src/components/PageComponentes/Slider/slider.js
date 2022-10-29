@@ -18,7 +18,6 @@ const Slider = () => {
 
   return (
     <div>
-      <h1>Monterrey BBQ</h1>
       <div style={containerStyles}>
         <ImageSlider slides={slides} />
       </div>

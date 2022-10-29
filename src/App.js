@@ -5,6 +5,7 @@ import Register from './pages/register';
 import Main     from './pages/main/main';
 import Menu     from './pages/menú';
 import Cart     from './pages/cart';
+import Product from './pages/product/product';
 
 import Test     from './pages/test/test';
 import Error404 from './pages/404/index';
@@ -19,12 +20,13 @@ function App() {
     <div className="App d-flex justify-content-center">
       <Router>
         <Routes>
-          <Route exact path="/"         element={<Login/>}>   </Route>
+          <Route exact path="/"         element={<Main/>}>   </Route>
+          <Route exact path="/login"     element={<Login/>}>    </Route>
           <Route exact path="/register" element={<Register/>}></Route>
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route exact path="/menu"     element={<Menu/>}>    </Route>
-          <Route exact path="/main"     element={<Main/>}>    </Route>
           <Route exact path="/cart"     element={<Cart/>}>    </Route>
+          <Route exact path="/product"     element={<Product/>}>    </Route>
           <Route path="*"               element={<Error404/>}></Route>
         </Routes>
       </Router>
