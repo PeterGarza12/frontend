@@ -3,7 +3,11 @@ import { TitleCart } from "./styles";
 import imgArrachera from "../../../res/arrachera.jpg";
 import { ListOfCart } from "./listOfCart";
 
-import { ContainerCart } from "./styles";
+import {
+  ContainerCart,
+  TotalCart,
+  PayCartBtn
+} from "./styles";
 
 
 const listCart =(
@@ -42,8 +46,15 @@ class CartC extends React.Component {
       <ContainerCart className="Aquí está lo del carrito col-10">
         <TitleCart>CARRITO</TitleCart>
         <div className="d-flex flex-row">
-        <div className="d-flex flex-column col-8 col-md-8">{listCart}</div>
-        <div>TOTAL</div>
+          <div className="d-flex flex-column col-8 col-md-8">{listCart}</div>
+          <div className="d-flex flex-column">
+            <TotalCart className="d-flex flex-row">
+              <div>total:      $</div>
+              <div>1000.00</div>
+            </TotalCart>
+            <PayCartBtn>Pagar</PayCartBtn>
+          </div>
+
         </div>
 
       </ContainerCart>

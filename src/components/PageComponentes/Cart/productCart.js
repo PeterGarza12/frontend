@@ -4,6 +4,7 @@ import {
   CartProductImage,
   CartProductInfo,
   CartProductTitle,
+  CartProductBtn
 } from './styles';
 
 export const ProductCart = ({ name, image, price }) => {
@@ -14,8 +15,17 @@ export const ProductCart = ({ name, image, price }) => {
         <CartProductTitle >{name}</CartProductTitle>
         <div>{price}</div>
         <div className='d-flex flex-row'>
-          <button>Eliminar producto</button>
-          <button>Agregar producto</button>
+          <CartProductBtn>Eliminar</CartProductBtn>
+          <form>
+            <label for="cantidad">Cantidad: </label>
+              <select name='cantidad'>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </form>
         </div>
       </CartProductInfo>
     </CartCard>
