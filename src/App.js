@@ -4,7 +4,7 @@ import Login    from './pages/login/index';
 import Register from './pages/register';
 import Main     from './pages/main/main';
 import Menu     from './pages/menú';
-
+import Cart     from './pages/cart';
 
 import Test     from './pages/test/test';
 import Error404 from './pages/404/index';
@@ -24,6 +24,7 @@ function App() {
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route exact path="/menu"     element={<Menu/>}>    </Route>
           <Route exact path="/main"     element={<Main/>}>    </Route>
+          <Route exact path="/cart"     element={<Cart/>}>    </Route>
           <Route path="*"               element={<Error404/>}></Route>
         </Routes>
       </Router>

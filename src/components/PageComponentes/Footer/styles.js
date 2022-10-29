@@ -8,7 +8,7 @@ export const FooterComp = styled.div`
   background-color: #ff2929;
   color: #fe9999;
   text-align: center;
-
+  margin-top: auto;
 `;
 
 export const TopNav = styled.div`
