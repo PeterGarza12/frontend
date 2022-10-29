@@ -1,17 +1,20 @@
-import { Dropdown } from 'reactstrap';
+import { Dropdown, Navbar } from 'reactstrap';
 import styled from "styled-components";
 
-export const HeaderComp = styled.div`
-  position: fixed;
+export const HeaderComp = styled(Navbar)`
+  position: absolute;
   width: 100%;
+  top: 0;
   background-color: black;
   color: white;
   text-align: center;
+  z-index: 2;
 `;
 
 export const TopNav = styled.div`
   background-color: black;
-  display: flex;
+  width: 100%;
+
   `;
 
 export const TopNavLink = styled.a`

@@ -28,7 +28,7 @@ export const View = (props) => {
           }
         </Row>
         <RowAfterHeader>
-          <Col className="col-12" >
+          <Col md="12" >
             {
               props.banner === 'Prueba' ? (
                 <h3>Aquí iría algún elemento extra como un anuncio o algo así dependiendo en cuál página estemos</h3>
@@ -39,7 +39,9 @@ export const View = (props) => {
             <Content>{props.children}</Content>
           </Col>
         </RowAfterHeader>
-        <Footer></Footer>
+        <Row>
+          <Footer></Footer>
+        </Row>
     </MainContainer>
   );
 };

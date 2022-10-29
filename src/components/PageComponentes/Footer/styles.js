@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 export const FooterComp = styled.div`
-  position: fixed;
-  left: 0;
+  position: relative;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: #fe9999;
+  background-color: #ff2929;
   color: #fe9999;
   text-align: center;
+
 `;
 
 export const TopNav = styled.div`
+  width: 100%;
   background-color: #ff2929 ;
   overflow: hidden;
 `;
