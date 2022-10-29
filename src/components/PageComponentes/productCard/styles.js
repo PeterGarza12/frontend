@@ -24,8 +24,12 @@ export const ProductCard = styled.div`
   flex-direction: column;
   transition: all 300ms ease;
   &:hover{
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
+
+  &:hover img{
+  opacity: 0.8;
+}
 `;
 
 export const ProductTitle = styled.h1`
@@ -60,9 +64,6 @@ export const ProductImage = styled.img`
   margin-bottom: 20px;
   border-radius: 20px 20px 0px 0px;
   transition: all 300ms ease;
-  &:hover{
-    opacity: 0.8;
-  }
 `;
 
 export const ProductButton = styled.div`
