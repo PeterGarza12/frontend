@@ -62,10 +62,6 @@ function Test(){
       <Product name={'Anborgesa'} price={'120.00'} description={'Una anvorgesa'}></Product>
 </Row>
 
-      <Row>Algo mas</Row>
-
-
-
     </View>
   );
 }
