@@ -9,7 +9,7 @@ import {
   LoginBtn,
   RegBtn
 } from './styles';
-import { Container, CardImg, Row, Col, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+import { Container, Navbar, CardImg, Row, Col, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import logo from "../../../res/logo.png"
 
 export const Header = ({ theme, items, logged, searchbar }) => {

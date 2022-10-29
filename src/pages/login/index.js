@@ -23,7 +23,7 @@ function Login(){
   let nav = useNavigate();
 
   return(
-    <View banner= {'Prueba'} header = {'Header'} logged = {false} theme={LoginTheme} >
+    <View banner= {''} header = {'Header'} logged = {false} theme={LoginTheme} >
       <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >
         <Container className="d-flex flex-row justify-content-center">
           <CardImg
