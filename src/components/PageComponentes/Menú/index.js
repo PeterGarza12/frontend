@@ -6,6 +6,7 @@ import imgHamburguesas from "../../../res/hamburguesa.jpg";
 import imgPizzas from "../../../res/pizzas.jpg";
 import imgBebidas from "../../../res/bebidas.jpg";
 import { ListOfCategories } from "./listOfCategories";
+import { useNavigate } from "react-router-dom";
 
 
 const listCategories =(
@@ -33,17 +34,21 @@ const listCategories =(
   />
 );
 
-class MenuC extends React.Component {
 
-  render(){
-    return(
-      <ContainerMenu className="d-flex">
-          <H3Prueba className="col-sm-2">MENÚ</H3Prueba>
-          <div className="col-sm-9">{listCategories}</div>
-      </ContainerMenu>
+//class MenuC extends React.Component {
+export const MenuC = () => {
 
-    );
-  }
+  let nav = useNavigate();
+
+  return(
+    <ContainerMenu className="d-flex">
+        <H3Prueba className="col-sm-2" onClick={()=>{
+        nav("/menu")
+      }}>MENÚ</H3Prueba>
+        <div className="col-sm-9">{listCategories}</div>
+    </ContainerMenu>
+  );
+
 }
 
 export default MenuC;

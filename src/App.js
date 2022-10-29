@@ -19,11 +19,11 @@ function App() {
     <div className="App d-flex justify-content-center">
       <Router>
         <Routes>
-          <Route exact path="/"         element={<Login/>}>   </Route>
+          <Route exact path="/login"    element={<Login/>}>   </Route>
           <Route exact path="/register" element={<Register/>}></Route>
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route exact path="/menu"     element={<Menu/>}>    </Route>
-          <Route exact path="/main"     element={<Main/>}>    </Route>
+          <Route exact path="/"         element={<Main/>}>    </Route>
           <Route exact path="/cart"     element={<Cart/>}>    </Route>
           <Route path="*"               element={<Error404/>}></Route>
         </Routes>

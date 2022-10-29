@@ -54,6 +54,7 @@ justify-content: start;
 export const CartProductInfo = styled.div`
 margin-left: 10px;
 align-items: flex-start;
+justify-content: space-between;
 `;
 
 export const CartProductImage = styled.img`

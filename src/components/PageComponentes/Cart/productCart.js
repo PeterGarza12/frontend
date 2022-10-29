@@ -6,11 +6,17 @@ import {
   CartProductTitle,
   CartProductBtn
 } from './styles';
+import { useNavigate } from "react-router-dom";
 
 export const ProductCart = ({ name, image, price }) => {
+
+  let nav = useNavigate();
+
   return (
     <CartCard>
-      <CartProductImage  src={image}></CartProductImage>
+      <CartProductImage  src={image} onClick={()=>{
+          nav("/product")
+        }}></CartProductImage>
       <CartProductInfo className='d-flex flex-column LAINFO'>
         <CartProductTitle >{name}</CartProductTitle>
         <div>{price}</div>

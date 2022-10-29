@@ -11,6 +11,7 @@ import {
 } from './styles';
 import { Container, Navbar, CardImg, Row, Col, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import logo from "../../../res/logo.png"
+import { useNavigate } from "react-router-dom";
 
 export const Header = ({ theme, items, logged, searchbar }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,6 +24,8 @@ export const Header = ({ theme, items, logged, searchbar }) => {
     setDropdownOpen(false);
   }
 
+  let nav = useNavigate();
+
   return (
     <HeaderComp>
     <TopNav>
@@ -31,7 +34,7 @@ export const Header = ({ theme, items, logged, searchbar }) => {
           <Col md="10" className='d-flex align-items-center float-left'>
 
           <Container>
-            <TopNavLink href="/">
+            <TopNavLink>
               <CardImg
               alt="Logo"
               src={logo}
@@ -41,7 +44,8 @@ export const Header = ({ theme, items, logged, searchbar }) => {
                   height: 30
                 }
               }
-              width="100%"/>
+              width="100%"
+              onClick={()=>{nav("/")}}/>
             </TopNavLink>
 
             {items.map((x, i) => (
@@ -55,7 +59,7 @@ export const Header = ({ theme, items, logged, searchbar }) => {
 
             <TopNavLink onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
               <HoverDropdown isOpen={dropdownOpen}  >
-                  <DropdownToggle nav caret>Menú</DropdownToggle>
+                  <DropdownToggle nav caret onClick={()=>{nav("/menu")}}>Menú</DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem>Tacos</DropdownItem>
                     <DropdownItem divider />
@@ -88,17 +92,15 @@ export const Header = ({ theme, items, logged, searchbar }) => {
             <Container>Opiones para usuario loggeado</Container>
           ) : (
             <Container className='d-flex justify-content-end'>
-              <LoginBtn href='/login'>
+              <LoginBtn onClick={()=>{nav("/login")}}>
                 Iniciar sesión
               </LoginBtn>
-              <RegBtn href='/register'>
+              <RegBtn onClick={()=>{nav("/register")}}>
                 Registrate
               </RegBtn>
             </Container>
           )}
-
           </Col>
-
         </Row>
       </Container>
     </TopNav>
