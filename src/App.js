@@ -2,9 +2,13 @@ import React    from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Login    from './pages/login/index';
 import Register from './pages/register';
+import Main     from './pages/main/main';
+import Menu     from './pages/menú';
+
+
 import Test     from './pages/test/test';
 import Error404 from './pages/404/index';
-import Menu     from './pages/menú';
+
 
 import './App.css';
 
@@ -19,6 +23,7 @@ function App() {
           <Route exact path="/register" element={<Register/>}></Route>
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route exact path="/menu"     element={<Menu/>}>    </Route>
+          <Route exact path="/main"     element={<Main/>}>    </Route>
           <Route path="*"               element={<Error404/>}></Route>
         </Routes>
       </Router>
