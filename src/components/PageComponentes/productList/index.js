@@ -31,7 +31,7 @@ export class ListOfProducts extends Component {
         </DetailCont>
 
 
-        <ProductLister>
+        <ProductLister className="ELPEPE">
           {products.map((x, i) => (
             i<4 ? (            <Col md="3" key={i}>
             <Product image={x.image} {...x}></Product>

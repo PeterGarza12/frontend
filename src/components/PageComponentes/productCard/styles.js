@@ -9,8 +9,9 @@ flex-direction: column;
 
 export const ProductCard = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  max-width: 250px;
-  min-width: 250px;
+  width: 250px;
+  height: 100%;
+  min-height: 100%;
   margin: 10px;
   text-align: center;
   font-family: arial;
@@ -50,6 +51,9 @@ export const ProductPrice = styled.div`
 export const ProductDescription = styled.div`
   color: gray;
   font-size: 15px;
+  overflow: hidden;
+  height: 50px;
+  text-overflow: ellipsis;
 `;
 
 export const DetailsCont = styled.div`
@@ -57,12 +61,13 @@ export const DetailsCont = styled.div`
   display: flex;
   flex-direction: column;
   padding: 15px;
-`;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  `;
 
 export const ProductImage = styled.img`
-  width: 100%;
-  min-height: 200px;
-  max-height: 200px;
+  width: 250px;
+  height: 200px;
   margin-bottom: 20px;
   border-radius: 20px 20px 0px 0px;
   transition: all 300ms ease;

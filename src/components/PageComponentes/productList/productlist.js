@@ -1,39 +1,34 @@
 import React from "react";
 import { ListOfProducts } from ".";
 import pollo from "../../../res/ProductTest.png"
+import arrachera from "../../../res/arrachera.jpg"
 
 const listProducts = (
   <ListOfProducts
     products={[
       {
-        name: 'Cereal Corn Flakes de Kelogs',
-        price: '34.5',
-        description: 'UN RICO CEREAL',
-        image: 'http://images.kglobalservices.com/www.kelloggs.com.mx/es_mx/product/kic-3670/kicproductimage-119149_corn-flakes-300g.jpg',
+        name: 'Carne Asada 1kg',
+        price: '134.50',
+        description: 'Tradicional carne asada al estilo regio',
+        image: "https://reyparrillero.com/wp-content/uploads/2020/08/4-2-1.png",
       },
       {
-        name: 'Cereal Zucaritas de Kelogs',
-        price: '44.5',
-        description: 'UN RICO CEREAL',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQIfRcPagOEDUiF1SDgEV4lyMJ0103dduvAg&usqp=CAU',
+        name: 'Arrachera 1kg',
+        price: '150.50',
+        description: 'Rica arrachera (1kg) servida junto con cebolla asada',
+        image: "https://humogris.com/wp-content/uploads/2021/09/70.png",
       },
       {
-        name: 'Cereal Froot Loops de Kelogs',
-        price: '34.5',
-        description: 'UN RICO CEREAL',
-        image: pollo,
+        name: 'Salchicha Asada',
+        price: '74.00',
+        description: 'Tradicional salchicha roja asada (4 piezas)',
+        image: 'https://us.123rf.com/450wm/dianazh/dianazh1904/dianazh190400362/121103987-salchichas-a-la-parrilla-aislado-sobre-un-fondo-blanco-.jpg?ver=6',
       },
       {
-        name: 'Cereal Froot Lope de Kelogs',
-        price: '34.5',
-        description: 'UN RICO CEREAL',
-        image: 'https://http2.mlstatic.com/D_NQ_NP_731638-MLM44700516954_012021-O.jpg',
-      },
-      {
-        name: 'Cereal Froot Lope de Kelogs',
-        price: '34.5',
-        description: 'UN RICO CEREAL',
-        image: 'https://http2.mlstatic.com/D_NQ_NP_731638-MLM44700516954_012021-O.jpg',
+        name: 'Cerveza Media',
+        price: '54.50',
+        description: 'Cerveza de tamaño medio',
+        image: 'https://www.seekpng.com/png/detail/30-305158_tarros-de-cerveza-png.png',
       },
     ]}
   />

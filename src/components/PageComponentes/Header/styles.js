@@ -1,4 +1,4 @@
-import { Dropdown, Navbar } from 'reactstrap';
+import { CardImg, Dropdown, Navbar } from 'reactstrap';
 import styled from "styled-components";
 
 export const HeaderComp = styled(Navbar)`
@@ -98,4 +98,10 @@ export const TopNavSearchButton = styled.button`
 
 export const HoverDropdown = styled(Dropdown)`
   display: block;
+`;
+
+export const HeaderImg = styled(CardImg)`
+  max-width: 100%;
+  display: block;
+  height: 30px;
 `;

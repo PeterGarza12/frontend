@@ -7,10 +7,11 @@ import {
   TopNavSearchButton,
   HoverDropdown,
   LoginBtn,
-  RegBtn
+  RegBtn,
+  HeaderImg
 } from './styles';
 import { Container, Navbar, CardImg, Row, Col, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
-import logo from "../../../res/logo.png"
+import logo from "../../../res/logoheader.png"
 import { useNavigate } from "react-router-dom";
 
 export const Header = ({ theme, items, logged, searchbar }) => {
@@ -35,16 +36,10 @@ export const Header = ({ theme, items, logged, searchbar }) => {
 
           <Container>
             <TopNavLink>
-              <CardImg
+              <HeaderImg
+              className="col-12"
               alt="Logo"
               src={logo}
-              style={
-                {
-                  width: 50,
-                  height: 30
-                }
-              }
-              width="100%"
               onClick={()=>{nav("/")}}/>
             </TopNavLink>
 

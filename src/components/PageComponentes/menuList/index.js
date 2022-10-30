@@ -21,13 +21,16 @@ export class MenuList extends Component {
         <CatTitle className='d-flex flex-row justify-content-center justify-content-lg-start col-12 col-lg-10'>
             Categoria
         </CatTitle>
-        <ListContainer className='d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12 col-lg-10'>
+        <div className="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12 col-lg-10" fluid>
+        <ListContainer className='d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12'>
         {products.map((x, i) => (
           <div key={i}>
             <Product image={x.image} {...x}></Product>
           </div>
           ))}
         </ListContainer>
+        </div>
+
 
       </div>
 

@@ -7,7 +7,7 @@ export const MainContainer = styled(Container)`
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-color: #6a6a6a;
+  background-color: #5a5a5a;
   overflow: auto;
   display: flex;
   flex-direction: column;
