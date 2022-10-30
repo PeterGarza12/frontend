@@ -8,8 +8,8 @@ import Cart     from './pages/cart';
 import Product from './pages/product/product';
 
 import Test     from './pages/test/test';
-import Error404 from './pages/404/index';
-
+import Error404 from './pages/404/index'
+import Profile from './pages/profile';
 
 import './App.css';
 
@@ -23,6 +23,7 @@ function App() {
           <Route exact path="/"         element={<Main/>}>   </Route>
           <Route exact path="/login"     element={<Login/>}>    </Route>
           <Route exact path="/register" element={<Register/>}></Route>
+          <Route exact path="/profile" element={<Profile/>}></Route>
           <Route exact path="/test"     element={<Test/>}>    </Route>
           <Route exact path="/menu"     element={<Menu/>}>    </Route>
           <Route exact path="/cart"     element={<Cart/>}>    </Route>
