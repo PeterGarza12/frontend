@@ -44,9 +44,13 @@ class CartC extends React.Component {
   render(){
     return(
       <ContainerCart className="Aquí está lo del carrito col-10">
+
         <TitleCart>CARRITO</TitleCart>
-        <div className="d-flex flex-row">
-          <div className="d-flex flex-column col-8 col-md-8">{listCart}</div>
+
+        <div className="d-flex flex-column-reverse flex-md-row">
+
+          <div className="d-flex flex-column col-12 col-md-8">{listCart}</div>
+
           <TotalSection className="d-flex flex-column">
             <TotalCart className="d-flex flex-row">
               <div>total:      $</div>
