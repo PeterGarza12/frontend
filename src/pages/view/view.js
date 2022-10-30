@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col } from "reactstrap";
+import { Row } from "reactstrap";
 //import { Content } from "../Content/content";
 import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
