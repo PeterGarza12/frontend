@@ -17,7 +17,7 @@ import {
 } from 'reactstrap';
 
 import { ContenedorLogin, BtnLink } from "../login/styles";
-import logo from "../../res/logo.png"
+import logo from "../../res/logo2.png"
 
 function Register(){
   let nav = useNavigate();
@@ -31,8 +31,8 @@ function Register(){
             src={logo}
             style={
               {
-                width: 211,
-                height: 53
+                width: 170,
+                height: 150
               }
             }
             width="100%"/>
