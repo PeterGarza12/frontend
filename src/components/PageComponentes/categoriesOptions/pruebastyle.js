@@ -2,8 +2,20 @@ import styled, {css} from "styled-components";
 
 export const ListItems = styled.li`
   color: black;
+  font-variant-caps: all-small-caps;
+  background-color: white;
   width: 100%;
   font-size: 20px;
+  border-radius: 5px 5px 0 0;
+  transition: all 300ms;
+  font-weight: bold;
+
+
+  &:hover{
+    cursor: pointer;
+
+  }
+
 
   ${(props) =>
     props.activeTab &&
@@ -11,7 +23,8 @@ export const ListItems = styled.li`
       color: white;
       background-color: #753232;
       font-weight: bold;
-      border-radius: 5px 5px 0 0;
+      transform: scale(1.03);
+
 
       ::after {
         content: "";
@@ -19,7 +32,6 @@ export const ListItems = styled.li`
         height: 5px;
         margin-top: 0.5rem;
         border-radius: 5px 5px 0 0;
-        background-color: #753232;
         display: block;
       }
     `}
@@ -29,7 +41,6 @@ export const List = styled.ul`
   display: flex;
   list-style-type: none;
   flex-direction: row;
-  border-bottom: 1px solid lightgray;
 
   justify-content: space-around;
 `;

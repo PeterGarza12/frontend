@@ -28,7 +28,7 @@ export const ImgContainer = styled(Container)`
 `;
 
 export const InfoContainer = styled(Container)`
-background-color: #d9d9d9;
+background-color: white;
 font-variant-caps: all-small-caps;
 box-shadow: 0  0 10px 0 gray;
 border-radius: 20px;

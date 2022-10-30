@@ -9,8 +9,8 @@ margin-bottom: 20px;
 `;
 
 export const TotalSection = styled.div`
-background-color: #753232;
-color: white;
+background-color: white;
+color: black;
 max-height: 200px;
 padding: 15px;
 border-radius: 8px;
@@ -38,20 +38,18 @@ export const TotalCart = styled.div`
 
 export const PayCartBtn = styled.button`
 margin-top: 20px;
-border: 1px solid white;
 margin-right: 10px;
-background: white;
-padding: 5px;
+background: #753232;
+border: none;
+padding: 8px;
 max-width: 140px;
 border-radius: 15px;
-color: black;
+color: white;
 min-width: 50%;
+transition: all 300ms;
 
 &:hover{
-  color: black;
-  border: 1px solid #d9d9d9;
-  background: #d9d9d9;
-
+  opacity: 0.8;
 }
 `;
 
@@ -59,12 +57,13 @@ min-width: 50%;
 export const CartCard = styled.div`
 border: none;
 margin-top: 20px;
-padding: 10px;
+padding: 15px;
 transition: all 300ms ease;
-border-bottom: 1px solid #d2d2d2;
 display: flex;
 flex-direction: row;
 justify-content: start;
+background-color: #753232;
+border-radius: 8px;
 `;
 
 export const CartProductInfo = styled.div`
@@ -76,7 +75,6 @@ justify-content: space-between;
 export const CartProductImage = styled.img`
 width: 190px;
 height: 120px;
-margin-top: 10px;
 border-radius: 9px 0px 0px 9px;
 transition: all 250ms ease;
 
@@ -94,11 +92,14 @@ color: white;
 
 export const CartProductBtn = styled.button`
 border: none;
-border-bottom: 1px solid black;
 margin-right: 10px;
+background-color: transparent ;
+color: white;
+transform: all 300ms;
 
 &:hover{
-  color: #ff2929;
+  background-color: #ff2929;
+  color:#ff2929;
   border-bottom: 1px solid #ff2929;
   background: none;
 }
