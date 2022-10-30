@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleCart } from "./styles";
+import { TitleCart, TotalSection } from "./styles";
 import imgArrachera from "../../../res/arrachera.jpg";
 import { ListOfCart } from "./listOfCart";
 
@@ -47,13 +47,13 @@ class CartC extends React.Component {
         <TitleCart>CARRITO</TitleCart>
         <div className="d-flex flex-row">
           <div className="d-flex flex-column col-8 col-md-8">{listCart}</div>
-          <div className="d-flex flex-column">
+          <TotalSection className="d-flex flex-column">
             <TotalCart className="d-flex flex-row">
               <div>total:      $</div>
               <div>1000.00</div>
             </TotalCart>
             <PayCartBtn>Pagar</PayCartBtn>
-          </div>
+          </TotalSection>
 
         </div>
 

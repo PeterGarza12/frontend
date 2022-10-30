@@ -7,6 +7,19 @@ color: black;
 font-variant-caps: all-small-caps;
 `;
 
+export const TotalSection = styled.div`
+background-color: #753232;
+color: white;
+max-height: 200px;
+padding: 15px;
+margin-top: 20px;
+border-radius: 8px;
+font-variant-caps: all-small-caps;
+box-shadow: 0  0 10px 0 gray;
+justify-content: center;
+align-items: center;
+`;
+
 export const TitleCart = styled.div`
 font-size: 38px;
 font-weight: bold;
@@ -24,17 +37,19 @@ export const TotalCart = styled.div`
 
 export const PayCartBtn = styled.button`
 margin-top: 20px;
-border: 1px solid black;
+border: 1px solid white;
 margin-right: 10px;
-background: none;
+background: white;
 padding: 5px;
 max-width: 140px;
 border-radius: 15px;
+color: black;
+min-width: 50%;
 
 &:hover{
   color: black;
-  border: 1px solid #ff9129;
-  background: #ff9129;
+  border: 1px solid #d9d9d9;
+  background: #d9d9d9;
 
 }
 `;
