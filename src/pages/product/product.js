@@ -19,8 +19,8 @@ function Product(){
   return(
     <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
       <div>
-      <ProductView name={"Alitas BBQ"} description={"Unue se compraUn producto que se compra"} price={"50.00"}
-      image={'http://images.kglobalservices.com/www.kelloggs.com.mx/es_mx/product/kic-3670/kicproductimage-119149_corn-flakes-300g.jpg'}></ProductView>
+      <ProductView name={"Carne Asada 1kg"} description={"Tradicional carne asada al estilo regio"} price={"50.00"}
+      image={'https://reyparrillero.com/wp-content/uploads/2020/08/4-2-1.png'}></ProductView>
 
       </div>
     </View>
