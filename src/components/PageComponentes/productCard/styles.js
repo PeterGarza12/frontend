@@ -32,7 +32,7 @@ export const ProductCard = styled.div`
 }
 `;
 
-export const ProductTitle = styled.h1`
+export const ProductTitle = styled.div`
   color: black;
   font-weight: bold;
   font-variant-caps: all-small-caps;
@@ -41,6 +41,7 @@ export const ProductTitle = styled.h1`
 `;
 
 export const ProductPrice = styled.div`
+  font-variant-caps: all-small-caps;
   color: black;
   font-size: 20px;
   font-weight: bold;
@@ -67,12 +68,13 @@ export const ProductImage = styled.img`
   transition: all 300ms ease;
 `;
 
-export const ProductButton = styled.div`
+export const ProductButton = styled(Link)`
   border: none;
   outline: 0;
   border-top: 1px solid gray;
   padding: 12px;
   color: white;
+  text-decoration: none;
   width: 100%;
   background-color: black;
   text-align: center;
@@ -86,5 +88,6 @@ export const ProductButton = styled.div`
   transition: all 300ms;
   &:hover {
     opacity: 0.8;
+    color: white;
   }
 `;

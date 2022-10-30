@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "../view/view";
 import ProfileForm from "../../components/Forms/profileForm";
-import { MainTheme } from "../../utils/colors";
+import { AltTheme } from "../../utils/colors";
 
 
 //import Footer from "../../components/PageComponentes/Footer";
@@ -23,7 +23,7 @@ function Profile(){
 
 
   return(
-    <View banner= {'Prueba'} header = {'Header'} theme={MainTheme}>
+    <View banner= {''} header = {'Header'} theme={AltTheme}>
       <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >
         <Container className="d-flex flex-row justify-content-center">
           <CardImg

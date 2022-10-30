@@ -5,7 +5,6 @@ import { Container, Row, Col} from 'reactstrap';
 export const ProductContainer = styled(Container)`
 display: flex;
 border-radius: 20px;
-background-color: white;
 width: 100%;
 margin-bottom: 20px;
 background-color: #753232;
@@ -15,7 +14,6 @@ background-color: #753232;
 export const MainContainer = styled(Container)`
 display: flex;
 border-radius: 20px;
-background-color: white;
 width: 100%;
 margin-bottom: 20px;
 `;
@@ -55,7 +53,7 @@ border: none;
 `;
 
 
-export const ProductText = styled.h2`
+export const ProductText = styled.div`
 font-size: 30px;
 margin: 20px;
 font-weight: bold;
@@ -65,9 +63,10 @@ export const ProductDesc = styled.span`
 font-size: 20px;
 `;
 
-export const ProductTitle = styled.h1`
+export const ProductTitle = styled.div`
 color: white;
 margin-bottom: 20px;
 font-size: 55px;
+font-weight: bold;
 `;
 

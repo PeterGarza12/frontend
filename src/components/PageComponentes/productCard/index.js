@@ -21,7 +21,7 @@ export const Product = ({ name, price, description, image }) => {
           <ProductDescription>{description}</ProductDescription>
         </DetailsCont>
       </ProductContainer>
-      <ProductButton>Ver producto</ProductButton>
+      <ProductButton to={`/product/${name}`}>Ver producto</ProductButton>
     </ProductCard>
   );
 };
