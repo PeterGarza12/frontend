@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const ContainerCart = styled.div`
 display: flex;
 flex-direction: column;
-color: black;
+color: white;
 font-variant-caps: all-small-caps;
+margin-bottom: 20px;
 `;
 
 export const TotalSection = styled.div`
@@ -12,12 +13,12 @@ background-color: #753232;
 color: white;
 max-height: 200px;
 padding: 15px;
-margin-top: 20px;
 border-radius: 8px;
 font-variant-caps: all-small-caps;
 box-shadow: 0  0 10px 0 gray;
 justify-content: center;
 align-items: center;
+margin: 20px;
 `;
 
 export const TitleCart = styled.div`
@@ -88,7 +89,7 @@ transition: all 250ms ease;
 export const CartProductTitle = styled.div`
 font-size: 25px;
 font-weight: bold;
-color: black;
+color: white;
 `;
 
 export const CartProductBtn = styled.button`

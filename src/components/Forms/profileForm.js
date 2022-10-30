@@ -59,7 +59,7 @@ class ProfileForm extends React.Component {
         </LabelForm>
 
         <BtnForm type="submit">
-         Guardar Cambios
+         Editar perfil
         </BtnForm>
       </form>
     </div>
