@@ -1,5 +1,6 @@
 import React from "react";
 import { ListOfProducts } from ".";
+import pollo from "../../../res/ProductTest.png"
 
 const listProducts = (
   <ListOfProducts
@@ -20,7 +21,7 @@ const listProducts = (
         name: 'Cereal Froot Loops de Kelogs',
         price: '34.5',
         description: 'UN RICO CEREAL',
-        image: 'https://http2.mlstatic.com/D_NQ_NP_731638-MLM44700516954_012021-O.jpg',
+        image: pollo,
       },
       {
         name: 'Cereal Froot Lope de Kelogs',

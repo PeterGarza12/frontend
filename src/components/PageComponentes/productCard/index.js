@@ -9,14 +9,12 @@ import {
   ProductContainer,
   DetailsCont
 } from './styles';
-import logo from "../../../res/ProductTest.png"
 
 export const Product = ({ name, price, description, image }) => {
-  console.log('Image', image)
   return (
     <ProductCard fluid>
       <ProductContainer fluid to={`/product/${name}`}>
-        <ProductImage src={logo}></ProductImage>
+        <ProductImage src={image}></ProductImage>
         <DetailsCont>
           <ProductTitle>{name}</ProductTitle>
           <ProductPrice>${price}</ProductPrice>

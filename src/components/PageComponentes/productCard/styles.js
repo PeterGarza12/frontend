@@ -61,6 +61,7 @@ export const DetailsCont = styled.div`
 export const ProductImage = styled.img`
   width: 100%;
   min-height: 200px;
+  max-height: 200px;
   margin-bottom: 20px;
   border-radius: 20px 20px 0px 0px;
   transition: all 300ms ease;
