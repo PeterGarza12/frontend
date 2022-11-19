@@ -1,8 +1,8 @@
 import 'regenerator-runtime/runtime';
 import React, { Component } from 'react';
-import { Col, Row, Container } from 'reactstrap';
 import { Product } from '../productCard';
 import { ListContainer, CatTitle } from './styles';
+import Store from '../../../utils/store';
 
 export class MenuList extends Component {
   constructor(props) {
@@ -13,9 +13,24 @@ export class MenuList extends Component {
   }
 
 
+  async componentDidMount() {
+    try {
+      new Store().getProducts({
+        callback: async (response) => {
+          console.log('response', response);
+            this.setState({
+              products: response.products,
+            });
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   render() {
     var products = this.state.products || [];
-    console.log('Products2', products);
+    console.log('QUEPDO', products);
     return (
       <div className='d-flex flex-column justify-content-center align-items-center'>
         <CatTitle className='d-flex flex-row justify-content-center justify-content-lg-start col-12 col-lg-10'>
