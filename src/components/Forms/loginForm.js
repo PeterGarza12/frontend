@@ -33,7 +33,17 @@ class LoginForm extends React.Component {
       e.preventDefault();
       /*****Agregar validaciones de que el correo y contraseña estén bien escritos y todo eso ******/
       //alert(`Usuario: ${email} Password: ${password}`);
-      this.props.onLogin(this.state.email, this.state.password);
+
+      let expresion = new RegExp(/(^[a-zA-Z0-9\-_]{8}$)/);
+      if(this.state.password.match(expresion)===null)
+      {
+        alert("Contraseña incorrecta");
+      }
+      else
+      {
+        this.props.onLogin(this.state.email, this.state.password);
+      }
+
     }
 
     return(
@@ -42,12 +52,12 @@ class LoginForm extends React.Component {
         <h1>¡Bienvenido!</h1>
         <LabelForm>
           Correo
-          <Proof type="email" className="col-12" value={email} onChange={this.handleEmailChange}/>
+          <Proof type="email" className="col-12" placeholder="Ingrese su correo electrónico" value={email} onChange={this.handleEmailChange}/>
         </LabelForm>
 
         <LabelForm>
           Constraseña
-          <Proof type="password" className="col-12" value={password} onChange={this.handlePasswordChange}/>
+          <Proof type="password" className="col-12" placeholder="Ingrese su contraseña" value={password} onChange={this.handlePasswordChange}/>
         </LabelForm>
 
         <BtnForm type="submit">

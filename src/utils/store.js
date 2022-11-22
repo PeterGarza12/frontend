@@ -22,10 +22,28 @@ export default class Store {
   Login(email, password, callback) {
     this.api.Request({
       method: 'POST',
-      url: '/user/login',
+      url: '/users/login',
       data: {
         email: email,
         password: password,
+      },
+      headers: this.headersLogin,
+      callback: callback,
+    });
+  }
+
+  SignUp(email, username, password, phone, callback) {
+    this.api.Request({
+      method: 'POST',
+      url: '/users/signup',
+      data: {
+        isActive: true,
+        username: username,
+        password: password,
+        email: email,
+        role: ["user"],
+        phone: phone,
+        image: "http://placeimg.com/333/333"
       },
       headers: this.headersLogin,
       callback: callback,

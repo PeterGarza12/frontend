@@ -13,6 +13,7 @@ import {
 import { Container, Navbar, CardImg, Row, Col, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
 import logo from "../../../res/logoheader.png"
 import { useNavigate } from "react-router-dom";
+import store2 from 'store2';
 
 export const Header = ({ theme, items, logged, searchbar }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -84,7 +85,16 @@ export const Header = ({ theme, items, logged, searchbar }) => {
           </Container>
 
           {logged ? (
-            <Container>Opiones para usuario loggeado</Container>
+            <Container className='d-flex justify-content-end'>
+              <LoginBtn onClick={()=>{nav("/profile")}}>
+                Perfil
+              </LoginBtn>
+              <RegBtn onClick={()=>{
+                store2.clearAll();
+                nav("/login")}}>
+                Cerrar sesión
+              </RegBtn>
+            </Container>
           ) : (
             <Container className='d-flex justify-content-end'>
               <LoginBtn onClick={()=>{nav("/login")}}>

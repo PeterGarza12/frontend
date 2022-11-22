@@ -17,7 +17,7 @@ import CartC from "../../components/PageComponentes/Cart/cart";
 function Cart(){
 
   return(
-    <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
+    <View banner= {''} header = {'Header'} theme={MainTheme} >
       <CartC></CartC>
     </View>
   );

@@ -23,7 +23,7 @@ const listProducts = (
 function Menu(){
 
   return(
-    <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
+    <View banner= {''} header = {'Header'} theme={MainTheme} >
       <CategoriesOptions></CategoriesOptions>
       <MenuList products={listProducts}></MenuList>
 

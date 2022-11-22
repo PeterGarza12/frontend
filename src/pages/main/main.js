@@ -9,13 +9,14 @@ import Slider from "../../components/PageComponentes/Slider/slider";
 function Main(){
 
   return(
-    <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
+    <View banner= {''} header = {'Header'} theme={MainTheme} >
 
       <ListProductsComponent></ListProductsComponent>
       <Slider></Slider>
       <MenuC></MenuC>
 
     </View>
+
   );
 }
 

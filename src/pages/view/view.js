@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Row } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 //import { Content } from "../Content/content";
 import { Header } from "../../components/PageComponentes/Header";
 import Footer from "../../components/PageComponentes/Footer";
 import { MainContainer, RowAfterHeader, RowFooter } from "./styles";
 import { pageColors } from "../../utils/colors";
+import store2 from 'store2';
 
 const navbaritems = [
   {
@@ -13,14 +15,34 @@ const navbaritems = [
   }
 ];
 
+
+
 export const View = (props) => {
+  let nav = useNavigate();
+
+  const store = store2.get('TOKEN');
+  const id = store2.get('USERID');
+  var logeado = false;
+  if(id==null){
+    logeado=false;
+  } else {
+    logeado=true;
+  }
+
+  console.log(id, props.page);
+
+  // useEffect(() => {
+  //   if (id===null && (props.page===null || props.page===undefined)){
+  //    nav("/login")
+  //   }
+  // },[])
 
   return(
     <MainContainer fluid bgImg = {pageColors[props.theme].bgImg}>
       <Row>
         {
           props.header === 'Header' ? (
-            <Header theme={props.theme} items={navbaritems} logged ={props.logged}></Header>
+            <Header theme={props.theme} items={navbaritems} logged ={logeado}></Header>
           ) : (
             <div></div>
           )

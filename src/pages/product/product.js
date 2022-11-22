@@ -17,7 +17,7 @@ import { ProductView } from "../../components/PageComponentes/productView";
 function Product(){
 
   return(
-    <View banner= {''} header = {'Header'} logged = {false} theme={MainTheme} >
+    <View banner= {''} header = {'Header'} theme={MainTheme} >
       <div>
       <ProductView name={"Carne Asada 1kg"} description={"Tradicional carne asada al estilo regio"} price={"50.00"}
       image={'https://reyparrillero.com/wp-content/uploads/2020/08/4-2-1.png'}></ProductView>
