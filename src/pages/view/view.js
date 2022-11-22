@@ -29,8 +29,6 @@ export const View = (props) => {
     logeado=true;
   }
 
-  console.log(id, props.page);
-
   // useEffect(() => {
   //   if (id===null && (props.page===null || props.page===undefined)){
   //    nav("/login")

@@ -50,11 +50,36 @@ export default class Store {
     });
   }
 
+  UpdateProfile(userid, username, password, phone, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/users/update/'+userid,
+      data: {
+        username: username,
+        password: password,
+        phone: phone,
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+
   SimpleRequest(type, url, data, callback) {
     this.api.Request({
       method: type,
       url: url,
       data: data,
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  getProfile(userid,{callback}) {
+    this.api.Request({
+      method: 'GET',
+      url: '/users/'+userid,
+      data: {},
       headers: this.headers,
       callback: callback,
     });

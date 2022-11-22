@@ -33,10 +33,35 @@ transition: all 300ms;
 }
 `;
 
+export const BtnEdit = styled.button`
+border: none;
+border-radius: 40px;
+color: white;
+text-decoration: none;
+text-align: center;
+padding: 7px 13px;
+background: black;
+margin-top: 40px;
+margin-bottom: 40px;
+width: 100%;
+transition: all 300ms;
+
+&:hover{
+  border: none;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  padding: 7px 13px;
+  background: #ff2929;
+  text-align: center;
+}
+`;
+
 export const Proof = styled.input`
 border: none;
 border-bottom: 1px solid black;
 margin-top: 20px;
+transition: all 200ms;
 
 &:hover, &:focus{
   outline: none;

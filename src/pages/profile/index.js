@@ -2,7 +2,9 @@ import React from "react";
 import { View } from "../view/view";
 import ProfileForm from "../../components/Forms/profileForm";
 import { AltTheme } from "../../utils/colors";
-
+import Store from '../../utils/store';
+import store2 from 'store2';
+import { useNavigate } from "react-router-dom";
 
 //import Footer from "../../components/PageComponentes/Footer";
 
@@ -20,6 +22,7 @@ import { ContenedorLogin } from "../login/styles";
 import logo from "../../res/logooo.png"
 
 function Profile(){
+  let nav = useNavigate();
 
 
   return(
@@ -39,8 +42,11 @@ function Profile(){
         </Container>
 
         <Container className="d-flex flex-row justify-content-center col-12">
-          <ProfileForm onRegister={(username, email, password, phone)=>{
-            alert(`${username}, ${email}, ${password}, ${phone}`);
+          <ProfileForm onUpdateProfile={(userid, username, password, phone)=>{
+            const store = new Store();
+            store.UpdateProfile(userid, username, password, phone, (response) => {
+              window.location.reload();
+            });
           }}></ProfileForm>
         </Container>
 
