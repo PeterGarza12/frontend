@@ -1,13 +1,29 @@
 import 'regenerator-runtime/runtime';
 import React from 'react';
 import { Category } from './categories';
+import Store from '../../../utils/store';
 
 export class ListOfCategories extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: props.categories,
+      categories: '',
     };
+  }
+
+  async componentDidMount() {
+    try {
+      new Store().getCategories({
+        callback: async (response) => {
+          console.log('response', response);
+            this.setState({
+              categories: response.categorias,
+            });
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {

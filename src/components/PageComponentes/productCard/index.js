@@ -10,10 +10,11 @@ import {
   DetailsCont
 } from './styles';
 
-export const Product = ({ name, price, description, image }) => {
+export const Product = ({ _id, name, price, description, image }) => {
+  image = "http://localhost:8080/"+image;
   return (
-    <ProductCard fluid>
-      <ProductContainer fluid to={`/product/${name}`}>
+    <ProductCard id={_id} fluid>
+      <ProductContainer fluid to={`/product/${_id}`}>
         <ProductImage src={image}></ProductImage>
         <DetailsCont>
           <ProductTitle>{name}</ProductTitle>
@@ -21,7 +22,7 @@ export const Product = ({ name, price, description, image }) => {
           <ProductDescription>{description}</ProductDescription>
         </DetailsCont>
       </ProductContainer>
-      <ProductButton to={`/product/${name}`}>Ver producto</ProductButton>
+      <ProductButton to={`/product/${_id}`}>Ver producto</ProductButton>
     </ProductCard>
   );
 };

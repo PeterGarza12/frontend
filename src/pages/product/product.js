@@ -1,30 +1,86 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { View } from "../view/view";
 import { MainTheme } from "../../utils/colors";
 import { ProductView } from "../../components/PageComponentes/productView";
-
-/*import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardImg,
-  /*CardTitle,
-  CardBody
-} from 'reactstrap';*/
+import Store from '../../utils/store';
 
 
-function Product(){
 
-  return(
-    <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <div>
-      <ProductView name={"Carne Asada 1kg"} description={"Tradicional carne asada al estilo regio"} price={"50.00"}
-      image={'https://reyparrillero.com/wp-content/uploads/2020/08/4-2-1.png'}></ProductView>
+class Product extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      id: '',
+      name: '',
+      desc: '',
+      price: '',
+      image: ''
+    }
+  }
 
-      </div>
-    </View>
-  );
+  async componentDidMount() {
+    const id = window.location.href.split('/')[4]
+    console.log(id);
+    try {
+      new Store().getProduct(id, {
+        callback: async (response) => {
+          this.setState({
+            name: response.data.name,
+            desc: response.data.description,
+            price: response.data.price,
+            image: response.data.image,
+          });
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+  render() {
+
+    return(
+
+      <View banner= {''} header = {'Header'} theme={MainTheme} >
+        <div>
+        <ProductView name={this.state.name} description={this.state.desc} price={this.state.price}
+        image={this.state.image}></ProductView>
+
+        </div>
+      </View>
+    );
+  }
 }
+// function Product(){
+//   const { id } = useParams();
+//  // var product = useRef(null);
+//   const [producto, setProduct]=useState();
+
+  // useEffect(() => {
+  //   try {
+  //     new Store().getProduct(id, {
+  //       callback: async (response) => {
+  //         //product.current=response.data;
+  //         setProduct(response.data);
+  //       },
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // })
+
+  // return(
+
+  //   <View banner= {''} header = {'Header'} theme={MainTheme} >
+  //     <div>
+  //     <ProductView name={producto.name} description={producto.description} price={producto.price}
+  //     image={producto.image}></ProductView>
+
+  //     </div>
+  //   </View>
+  // );
+// }
 
 export default Product;

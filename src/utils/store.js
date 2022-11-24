@@ -85,7 +85,21 @@ export default class Store {
     });
   }
 
+  getProduct(productid,{callback}) {
+    this.api.Request({
+      method: 'GET',
+      url: '/products/'+productid,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
   getProducts({ data = {}, callback }) {
     this.SimpleRequest('GET', '/products', data, callback);
+  }
+
+  getCategories({ data = {}, callback }) {
+    this.SimpleRequest('GET', '/categories', data, callback);
   }
 }

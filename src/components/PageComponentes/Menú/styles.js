@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 import { Container } from "reactstrap";
 
 export const ContainerMenu = styled(Container)`
@@ -26,8 +27,11 @@ transition: all 300ms ease;
 `;
 
 //Estilos para la carta de la categoría en sí
-export const CategoryCard = styled.div`
+export const CategoryCard = styled(Link)`
 background-color: white;
+text-decoration: none;
+display: flex;
+flex-direction: column;
 border-radius: 9px;
 box-shadow: 0  0 10px 0 gray;
 padding: 10px;

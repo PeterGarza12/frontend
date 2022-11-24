@@ -2,11 +2,9 @@ import React, {Fragment, useState, useEffect } from 'react';
 import {
   ImgContainer, InfoContainer, ProductContainer, ProductBtn, ProductTitle, ProductText, ProductDesc, MainContainer
 } from './styles';
-import { Container, Row, Col} from 'reactstrap';
-import logo from "../../../res/ProductTest.png"
 
 export const ProductView = ({ name, price, description, image }) => {
-  console.log('Image', image)
+  image = "http://localhost:8080/"+image;
   return (
     <MainContainer className='d-flex flex-column align-items-start' fluid>
       <ProductBtn className='col-12 col-lg-2'>Menú</ProductBtn>

@@ -5,9 +5,10 @@ import {
   CategoryTitle,
 } from './styles';
 
-export const Category = ({ name, image }) => {
+export const Category = ({ id, name, image }) => {
+  image = "http://localhost:8080/"+image;
   return (
-    <CategoryCard>
+    <CategoryCard to={`/menu/${id}`}>
       <CategoryImage src={image}></CategoryImage>
       <CategoryTitle>{name}</CategoryTitle>
     </CategoryCard>

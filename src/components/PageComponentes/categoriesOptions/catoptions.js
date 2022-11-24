@@ -1,20 +1,24 @@
 import React from "react";
 import { ListItems, List, Div } from "./pruebastyle";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function MessageTab() {
   return (
     <Tabs>
-      <div label="Tacos">Recent component</div>
-      <div label="Hamburguesa">Unread component</div>
-      <div label="Pizza">Groups component</div>
-      <div label="Bebidas">Groups component</div>
+      <div label="Carne" id="1"></div>
+      <div label="Hamburguesa" id="2"></div>
+      <div label="Tacos" id="3"></div>
+      <div label="Bebidas" id="4"></div>
     </Tabs>
   );
 }
 
 function Tabs(props) {
-  const [activeTab, setActiveTab] = useState(props.children[0].props.label);
+
+  const id = window.location.href.split('/')[4]
+  const [activeTab, setActiveTab] = useState(props.children[id-1].props.label);
+
 
   const switchTabs = (tab) => {
     setActiveTab(tab);
@@ -25,8 +29,10 @@ function Tabs(props) {
       <List>
         {props.children.map((child) => {
           const { label } = child.props;
+          const { id }= child.props;
           return (
             <Tab
+              id={id}
               activeTab={activeTab}
               key={label}
               label={label}
@@ -40,16 +46,18 @@ function Tabs(props) {
 }
 
 function Tab(props) {
-  const { label, onClick, activeTab } = props;
+  const { id, label, onClick, activeTab } = props;
+  let nav = useNavigate();
 
   return (
-    <ListItems activeTab={activeTab === label} onClick={() => onClick(label)}>
+    <ListItems activeTab={activeTab === label} onClick={() => {onClick(label); nav("/menu/"+id);}}>
       {label}
     </ListItems>
   );
 }
 
 export default function CategoriesOptions() {
+
   return (
       <MessageTab/>
   );
