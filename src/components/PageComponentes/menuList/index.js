@@ -27,6 +27,7 @@ export class MenuList extends Component {
       console.log(error);
     }
   }
+  //a
 
   render() {
     var products = this.state.products || [];
