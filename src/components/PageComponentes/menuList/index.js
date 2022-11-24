@@ -13,6 +13,7 @@ export class MenuList extends Component {
   }
 
 
+
   async componentDidMount() {
     const id = window.location.href.split('/')[4]
     try {

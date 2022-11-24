@@ -1,7 +1,6 @@
 import React from "react";
 import { ListItems, List, Div } from "./pruebastyle";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function MessageTab() {
   return (
@@ -45,12 +44,16 @@ function Tabs(props) {
   );
 }
 
+function useForceUpdate() {
+  let [value, setState] = useState(true);
+  return () => setState(!value);
+}
+
 function Tab(props) {
   const { id, label, onClick, activeTab } = props;
-  let nav = useNavigate();
 
   return (
-    <ListItems activeTab={activeTab === label} to={`/menu/${id}`} onClick={() => {onClick(label); nav("/menu/"+id); window.location.reload();}}>
+    <ListItems activeTab={activeTab === label} to={`/menu/${id}`} onClick={useForceUpdate}>
       {label}
     </ListItems>
   );

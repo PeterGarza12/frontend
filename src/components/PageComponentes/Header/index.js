@@ -36,12 +36,12 @@ export const Header = ({ theme, items, logged, searchbar }) => {
           <Col md="10" className='d-flex align-items-center float-left'>
 
           <Container>
-            <TopNavLink>
+            <TopNavLink onClick={()=>{nav("/")}}>
               <HeaderImg
               className="col-12"
               alt="Logo"
               src={logo}
-              onClick={()=>{nav("/")}}/>
+              />
             </TopNavLink>
 
             {items.map((x, i) => (
@@ -55,13 +55,15 @@ export const Header = ({ theme, items, logged, searchbar }) => {
 
             <TopNavLink onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
               <HoverDropdown isOpen={dropdownOpen}  >
-                  <DropdownToggle nav caret onClick={()=>{nav("/menu")}}>Menú</DropdownToggle>
+                  <DropdownToggle nav caret onClick={()=>{nav("/menu/1"); window.location.reload()}}>Menú</DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem>Tacos</DropdownItem>
+                    <DropdownItem onClick={()=>{nav("/menu/1"); window.location.reload()}}>Carne</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Hamburguesas</DropdownItem>
+                    <DropdownItem onClick={()=>{nav("/menu/2"); window.location.reload()}}>Hamburguesas</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Carne</DropdownItem>
+                    <DropdownItem onClick={()=>{nav("/menu/3"); window.location.reload()}}>Tacos</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem onClick={()=>{nav("/menu/4"); window.location.reload()}}>Bebidas</DropdownItem>
                   </DropdownMenu>
               </HoverDropdown>
             </TopNavLink>
