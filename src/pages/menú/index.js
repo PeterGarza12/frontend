@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { View } from "../view/view";
 import { MainTheme } from "../../utils/colors";
 import CategoriesOptions from "../../components/PageComponentes/categoriesOptions/catoptions";
 import { MenuList } from "../../components/PageComponentes/menuList";
+
 /*import {
   Container,
   Row,

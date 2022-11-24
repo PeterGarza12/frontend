@@ -1,13 +1,16 @@
 import React, {Fragment, useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import {
   ImgContainer, InfoContainer, ProductContainer, ProductBtn, ProductTitle, ProductText, ProductDesc, MainContainer
 } from './styles';
 
 export const ProductView = ({ name, price, description, image }) => {
   image = "http://localhost:8080/"+image;
+  let nav = useNavigate();
   return (
     <MainContainer className='d-flex flex-column align-items-start' fluid>
-      <ProductBtn className='col-12 col-lg-2'>Menú</ProductBtn>
+      <ProductBtn className='col-12 col-lg-2' onClick={()=>{  nav("/menu/1");}}>Menú</ProductBtn>
       <ProductContainer fluid className='d-flex flex-column flex-lg-row justify-content-center'>
         <ImgContainer className='col-12 col-lg-5'>
           <ProductTitle>{name}</ProductTitle>

@@ -14,12 +14,13 @@ export class MenuList extends Component {
 
 
   async componentDidMount() {
+    const id = window.location.href.split('/')[4]
     try {
-      new Store().getProducts({
+      new Store().getCatProducts(id,{
         callback: async (response) => {
           console.log('response', response);
             this.setState({
-              products: response.products,
+              products: response.data,
             });
         },
       });
@@ -27,7 +28,6 @@ export class MenuList extends Component {
       console.log(error);
     }
   }
-  //a
 
   render() {
     var products = this.state.products || [];
@@ -38,7 +38,7 @@ export class MenuList extends Component {
             Categoria
         </CatTitle>
         <div className="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12 col-lg-10" fluid>
-        <ListContainer className='d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12'>
+        <ListContainer key={products} className='d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12'>
         {products.map((x, i) => (
           <div key={i}>
             <Product image={x.image} {...x}></Product>

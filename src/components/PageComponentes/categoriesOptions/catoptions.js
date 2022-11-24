@@ -50,7 +50,7 @@ function Tab(props) {
   let nav = useNavigate();
 
   return (
-    <ListItems activeTab={activeTab === label} onClick={() => {onClick(label); nav("/menu/"+id);}}>
+    <ListItems activeTab={activeTab === label} to={`/menu/${id}`} onClick={() => {onClick(label); nav("/menu/"+id); window.location.reload();}}>
       {label}
     </ListItems>
   );

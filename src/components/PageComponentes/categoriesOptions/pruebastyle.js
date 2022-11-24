@@ -1,7 +1,9 @@
 import styled, {css} from "styled-components";
+import { Link } from 'react-router-dom';
 
-export const ListItems = styled.li`
+export const ListItems = styled(Link)`
   color: black;
+  text-decoration: none;
   font-variant-caps: all-small-caps;
   background-color: white;
   width: 100%;
@@ -13,7 +15,8 @@ export const ListItems = styled.li`
 
   &:hover{
     cursor: pointer;
-
+    text-decoration: none;
+    color: inherit;
   }
 
 

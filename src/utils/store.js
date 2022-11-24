@@ -99,6 +99,16 @@ export default class Store {
     this.SimpleRequest('GET', '/products', data, callback);
   }
 
+  getCatProducts(catid,{callback}) {
+    this.api.Request({
+      method: 'GET',
+      url: '/products/cat/'+catid,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
   getCategories({ data = {}, callback }) {
     this.SimpleRequest('GET', '/categories', data, callback);
   }

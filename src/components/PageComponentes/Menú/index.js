@@ -16,7 +16,7 @@ export const MenuC = () => {
   return(
     <ContainerMenu className="d-flex">
         <H3Prueba className="col-sm-2" onClick={()=>{
-        nav("/menu")
+        nav("/menu/1")
       }}>MENÚ</H3Prueba>
         <div className="col-sm-9">
           <ListOfCategories></ListOfCategories>
