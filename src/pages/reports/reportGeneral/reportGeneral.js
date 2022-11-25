@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View } from "../../view/view";
 import { MainTheme } from "../../../utils/colors";
 import Table from "../../../components/PageComponentes/Table/table";
-import { StyledH1 } from "../../../components/Forms/Reports/styles";
+import ReportByGeneral from "../../../components/Forms/Reports/byGeneral";
 
 /*ESTO ASÍ VA HARDCODEADO, SON LOS TÍTULOS DE LAS COLUMNAS */
 const ColumnsReportsGeneral = (
@@ -45,7 +45,24 @@ function ReportGeneral() {
   //Según yo no se necesita hacer ninguna búsqueda en este reporte porque es general
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <StyledH1>Reporte General</StyledH1>
+      <ReportByGeneral
+        onCreateReport={()=>{
+          setDataTable(RowsReportsGeneral);
+              // const store = new Store();
+              // store.PostReportGeneral(, (response) => {
+              //   setDataTable(response.data);
+              //   nav("/");
+              // });
+            }}
+
+        onSearchReport={()=>{
+        setDataTable(RowsReportsGeneral);
+            // const store = new Store();
+            // store.GetReportGeneral(, (response) => {
+            //   setDataTable(response.data);
+            //   nav("/");
+            // });
+          }}></ReportByGeneral>
       <Table data= {dataTable} column={ColumnsReportsGeneral}></Table>
     </View>
   );
