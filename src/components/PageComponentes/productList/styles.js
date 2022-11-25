@@ -55,7 +55,7 @@ export const ProductLister = styled(Row)`
 position: relative;
 display: flex;
 flex-direction: row;
-justify-content: end;
+justify-content: space-around;
 `;
 
 

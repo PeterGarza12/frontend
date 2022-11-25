@@ -6,7 +6,7 @@ function MessageTab() {
   return (
     <Tabs>
       <div label="Carne" id="1"></div>
-      <div label="Hamburguesa" id="2"></div>
+      <div label="Hamburguesas" id="2"></div>
       <div label="Tacos" id="3"></div>
       <div label="Bebidas" id="4"></div>
     </Tabs>

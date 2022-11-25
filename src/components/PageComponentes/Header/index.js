@@ -15,7 +15,7 @@ import logo from "../../../res/logoheader.png"
 import { useNavigate } from "react-router-dom";
 import store2 from 'store2';
 
-export const Header = ({ theme, items, logged, searchbar }) => {
+export const Header = ({ theme, items, logged, searchbar, username }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const showDropdown = (e)=>{
@@ -89,7 +89,7 @@ export const Header = ({ theme, items, logged, searchbar }) => {
           {logged ? (
             <Container className='d-flex justify-content-end'>
               <LoginBtn onClick={()=>{nav("/profile")}}>
-                Perfil
+                {username}
               </LoginBtn>
               <RegBtn onClick={()=>{
                 store2.clearAll();

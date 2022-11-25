@@ -9,11 +9,12 @@ import Slider from "../../components/PageComponentes/Slider/slider";
 function Main(){
 
   return(
-    <View banner= {''} header = {'Header'} theme={MainTheme} >
+    <View banner= {''} header = {'Header'} theme={MainTheme}>
 
-      <ListProductsComponent></ListProductsComponent>
+      <ListProductsComponent text={'Productos'} text2={'Populares'} type={0}></ListProductsComponent>
       <Slider></Slider>
       <MenuC></MenuC>
+      <ListProductsComponent text={''} text2={'Sugerencias'} type={1}></ListProductsComponent>
 
     </View>
 

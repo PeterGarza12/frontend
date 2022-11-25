@@ -3,6 +3,7 @@ import { View } from "../view/view";
 import { MainTheme } from "../../utils/colors";
 import { ProductView } from "../../components/PageComponentes/productView";
 import Store from '../../utils/store';
+import store2 from 'store2';
 
 
 
@@ -20,6 +21,7 @@ class Product extends React.Component {
 
   async componentDidMount() {
     const id = window.location.href.split('/')[4]
+    var userid = store2.get('USERID');
     console.log(id);
     try {
       new Store().getProduct(id, {
@@ -29,9 +31,12 @@ class Product extends React.Component {
             desc: response.data.description,
             price: response.data.price,
             image: response.data.image,
-          });
+            category: response.data.idCategory
+          }, (respuesta)=>{new Store().UpdateSugg(userid, this.state.category, (respuesta)=>{});});
+
         },
       });
+
     } catch (error) {
       console.log(error);
     }

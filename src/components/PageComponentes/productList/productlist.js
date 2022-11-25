@@ -1,47 +1,35 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
 import { ListOfProducts } from ".";
-import pollo from "../../../res/ProductTest.png"
-import arrachera from "../../../res/arrachera.jpg"
 
-const listProducts = (
-  <ListOfProducts
-    products={[
-      {
-        name: 'Carne Asada 1kg',
-        price: '134.50',
-        description: 'Tradicional carne asada al estilo regio',
-        image: "http://localhost:8080/file-1669251533037.png",
-      },
-      {
-        name: 'Arrachera 1kg',
-        price: '150.50',
-        description: 'Rica arrachera (1kg) servida junto con cebolla asada',
-        image: "http://localhost:8080/file-1669251649022.png",
-      },
-      {
-        name: 'Salchicha Asada',
-        price: '74.00',
-        description: 'Tradicional salchicha roja asada (4 piezas)',
-        image: 'http://localhost:8080/file-1669251657681.png',
-      },
-      {
-        name: 'Cerveza Media',
-        price: '54.50',
-        description: 'Cerveza de tamaño medio',
-        image: 'http://localhost:8080/file-1669251662168.png',
-      },
-    ]}
-  />
+var listProducts = (
+  [
+
+    ]
 );
 
 
 class ListProductsComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: '',
+      text: props.text,
+      text2: props.text2,
+      type: props.type
+    };
+  }
 
   render(){
     return(
-      <div className="d-flex" fluid>{listProducts}</div>
+      <div className="d-flex" fluid>
+        <ListOfProducts products={listProducts} type={this.state.type} text={this.state.text} text2={this.state.text2}></ListOfProducts>
+      </div>
     );
   }
 }
+
+
+
 
 export default ListProductsComponent;
