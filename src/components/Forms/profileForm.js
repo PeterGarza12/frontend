@@ -50,6 +50,11 @@ class ProfileForm extends React.Component {
     document.getElementById("password").value="";
     document.getElementById("editar").hidden=true;
     document.getElementById("guardar").hidden=false;
+    document.getElementById("cancel").hidden=false;
+  }
+
+  handlerCancel = (e) => {
+    window.location.reload();
   }
 
   handleUsernameChange = (e) => {
@@ -112,11 +117,10 @@ class ProfileForm extends React.Component {
     return(
     <div className="RegisterForm col-10">
       <form>
-        <h1>Perfil de Usuario</h1>
-        <h3>Editar Perfil</h3>
+        <h1>Perfil de {username}</h1>
 
         <LabelForm>
-          Correo
+          Correo electrónico
           <Proof disabled type="email" id='email' className="col-12" value={email} placeholder="Correo"/>
         </LabelForm>
 
@@ -142,6 +146,9 @@ class ProfileForm extends React.Component {
         <BtnForm id="guardar" type='submit' hidden onClick={handleFormSubmit}>
          Actualizar perfil
         </BtnForm>
+        <BtnEdit id="cancel" hidden onClick={this.handlerCancel}>
+         Cancelar
+        </BtnEdit>
       </form>
     </div>
     );

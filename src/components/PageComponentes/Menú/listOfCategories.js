@@ -15,7 +15,6 @@ export class ListOfCategories extends React.Component {
     try {
       new Store().getCategories({
         callback: async (response) => {
-          console.log('response', response);
             this.setState({
               categories: response.categorias,
             });

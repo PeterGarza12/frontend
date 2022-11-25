@@ -24,7 +24,6 @@ import logo from "../../res/logooo.png"
 function Profile(){
   let nav = useNavigate();
 
-
   return(
     <View banner= {''} header = {'Header'} theme={AltTheme}>
       <ContenedorLogin fluid className="col-11 col-sm-8 col-lg-5 col-xl-4 my-5" >

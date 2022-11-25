@@ -64,6 +64,41 @@ export default class Store {
     });
   }
 
+  CreateSugg(userid, catid, callback) {
+    this.api.Request({
+      method: 'POST',
+      url: '/sugg/create',
+      data: {
+        idCategory: catid,
+        idUser: userid,
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  UpdateSugg(userid, catid, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/sugg/'+userid,
+      data: {
+        idCategory: catid
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  GetSugg(userid, callback){
+    this.api.Request({
+      method: 'GET',
+      url: '/sugg/user/'+userid,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
 
   SimpleRequest(type, url, data, callback) {
     this.api.Request({

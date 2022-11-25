@@ -51,6 +51,7 @@ function Register(){
             //alert(`${username}, ${email}, ${password}, ${phone}`);
             const store = new Store();
             store.SignUp(email, username, password, phone, (response) => {
+              store.CreateSugg(response.data._id, 1, (respuesta)=>{});
               nav("/login");
             });
           }}></RegisterForm>

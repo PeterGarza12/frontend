@@ -22,6 +22,7 @@ export const View = (props) => {
 
   const store = store2.get('TOKEN');
   const id = store2.get('USERID');
+  const user = store2.get('USERNAME');
   var logeado = false;
   if(id==null){
     logeado=false;
@@ -40,7 +41,7 @@ export const View = (props) => {
       <Row>
         {
           props.header === 'Header' ? (
-            <Header theme={props.theme} items={navbaritems} logged ={logeado}></Header>
+            <Header theme={props.theme} items={navbaritems} logged ={logeado} username={user}></Header>
           ) : (
             <div></div>
           )

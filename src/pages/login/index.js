@@ -53,6 +53,7 @@ function Login(){
             store.Login(email, password, (response) => {
               store2.set('TOKEN', response.token);
               store2.set('USERID', response.data._id);
+              store2.set('USERNAME', response.data.username);
               nav("/");
             });
           }}></LoginForm>

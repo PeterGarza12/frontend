@@ -1,8 +1,9 @@
 import 'regenerator-runtime/runtime';
 import React, { Component } from 'react';
 import { Product } from '../productCard';
-import { ListContainer, CatTitle } from './styles';
+import { ListContainer, CatTitle, CardContainer } from './styles';
 import Store from '../../../utils/store';
+import { Col } from 'reactstrap';
 
 export class MenuList extends Component {
   constructor(props) {
@@ -32,18 +33,17 @@ export class MenuList extends Component {
 
   render() {
     var products = this.state.products || [];
-    console.log('QUEPDO', products);
     return (
       <div className='d-flex flex-column justify-content-center align-items-center'>
         <CatTitle className='d-flex flex-row justify-content-center justify-content-lg-start col-12 col-lg-10'>
-            Categoria
+            Menú
         </CatTitle>
         <div className="d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12 col-lg-10" fluid>
-        <ListContainer key={products} className='d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center col-12'>
+        <ListContainer className='d-flex flex-column flex-lg-row flex-wrap justify-content-center col-12'>
         {products.map((x, i) => (
-          <div key={i}>
+          <CardContainer key={i}>
             <Product image={x.image} {...x}></Product>
-          </div>
+          </CardContainer>
           ))}
         </ListContainer>
         </div>
