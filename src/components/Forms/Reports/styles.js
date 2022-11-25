@@ -47,9 +47,8 @@ export const StyledButton = styled.button`
   text-align: center;
   padding: 7px 13px;
   background: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
   transition: all 300ms;
+  margin: 20px 10px 20px 10px;
 
   &:hover{
     border: 1px solid #522323;

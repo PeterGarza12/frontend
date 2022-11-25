@@ -27,18 +27,24 @@ class ReportByDateForm extends React.Component {
     const { initDate } = this.state
     const { maxDate } = this.state
 
-    const handleFormSubmit = (e) => {
+    const handleFormCreate = (e) => {
+      e.preventDefault();
+
+      console.log(initDate);
+      this.props.onCreateReport(this.state.initDate);
+    }
+
+    const handleFormSearch = (e) => {
       e.preventDefault();
 
       console.log(initDate);
       this.props.onSearchReport(this.state.initDate);
-
     }
 
     return(
     <div className="ReportByDateForm col-10">
       <StyledH1>Reporte por fecha</StyledH1>
-      <StyledForm onSubmit={handleFormSubmit}>
+      <StyledForm>
 
 
         <StyledLabel>
@@ -46,7 +52,10 @@ class ReportByDateForm extends React.Component {
           <StyledInput type="date" className="col-12" max={maxDate} value={initDate} onChange={this.handleinitDateChange}/>
         </StyledLabel>
 
-        <StyledButton className='col-6' type="submit">
+        <StyledButton className='col-4'  onClick={handleFormCreate}>
+          Crear
+        </StyledButton>
+        <StyledButton className='col-4' onClick={handleFormSearch}>
           Buscar
         </StyledButton>
       </StyledForm>

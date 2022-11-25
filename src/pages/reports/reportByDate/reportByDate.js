@@ -102,10 +102,20 @@ function ReportByDate() {
 
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <ReportByDateForm onSearchReport={(idUser)=>{
+      <ReportByDateForm
+        onCreateReport={(date)=>{
         setDataTable(RowsReportsByDate2);
             // const store = new Store();
-            // store.GetReportByDate(idUser, (response) => {
+            // store.PostReportByDate(date, (response) => {
+            //   setDataTable(response.data);
+            //   nav("/");
+            // });
+          }}
+
+        onSearchReport={(date)=>{
+        setDataTable(RowsReportsByDate2);
+            // const store = new Store();
+            // store.GetReportByDate(date, (response) => {
             //   setDataTable(response.data);
             //   nav("/");
             // });

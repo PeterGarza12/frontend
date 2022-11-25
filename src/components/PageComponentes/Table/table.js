@@ -16,6 +16,7 @@ const Table = ({ data, column }) => {
 }
 
 const TableHeadItem = ({ item }) => <th>{item.heading}</th>
+
 const TableRow = ({ item, column }) => (
   <tr>
     {column.map((columnItem, index) => {

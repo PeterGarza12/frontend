@@ -6,33 +6,43 @@ class ReportByUserForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      idUser: ''
+      emailUser: ''
     }
   }
 
-  handleidUserChange = (e) => {
+  handleemailUserChange = (e) => {
     const { value } = e.target
-    this.setState({ idUser: value })
+    this.setState({ emailUser: value })
   }
 
   render() {
-    const { idUser } = this.state
+    const { emailUser } = this.state
 
-    const handleFormSubmit = (e) => {
+    const handleFormCreate = (e) => {
       e.preventDefault();
 
-        this.props.onSearchReport(this.state.idUser);
+        this.props.onCreateReport(this.state.emailUser);
+    }
+
+    const handleFormSearch = (e) => {
+      e.preventDefault();
+
+        this.props.onSearchReport(this.state.emailUser);
     }
 
     return(
     <div className="ReportByUserForm col-10">
-      <StyledH1>Reporte por ID del usuario</StyledH1>
-      <StyledForm onSubmit={handleFormSubmit}>
+      <StyledH1>Reporte por usuario</StyledH1>
+      <StyledForm>
         <StyledLabel>
-          Buscar mediante el id/correo del usuario
-          <StyledInput type="text" className="col-12" placeholder="ID del usuario" value={idUser} onChange={this.handleidUserChange}/>
+          Buscar mediante el correo del usuario
+          <StyledInput type="text" className="col-12" placeholder="Correo del usuario" value={emailUser} onChange={this.handleemailUserChange}/>
         </StyledLabel>
-        <StyledButton type="submit">
+
+        <StyledButton className='col-4'  onClick={handleFormCreate}>
+          Crear
+        </StyledButton>
+        <StyledButton className='col-4' onClick={handleFormSearch}>
           Buscar
         </StyledButton>
       </StyledForm>

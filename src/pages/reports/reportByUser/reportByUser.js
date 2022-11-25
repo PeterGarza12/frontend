@@ -8,7 +8,7 @@ import ReportByUserForm from "../../../components/Forms/Reports/byUserForm";
 const ColumnsReportsByUser = (
   [
     { heading: 'ID reporte',              value: 'id' },
-    { heading: 'ID Usuario',              value: 'idUser' },
+    { heading: 'Email Usuario',           value: 'email' },
     { heading: 'Categoría más comprada',  value: 'mostSellProd' },
     { heading: 'Producto más comprado',   value: 'mostSellCat' },
     { heading: 'Total',                   value: 'totalPrice' },
@@ -21,14 +21,14 @@ const RowsReportsByUser = (
   [
     {
       id: 1,
-      idUser: 1,
+      email: 1,
       mostSellProd: 1,
       mostSellCat: 1,
       totalPrice: 1
     },
     {
       id: 2,
-      idUser: 2,
+      email: 2,
       mostSellProd: 2,
       mostSellCat: 2,
       totalPrice: 2
@@ -40,14 +40,14 @@ const RowsReportsByUser2 = (
   [
     {
       id: 3,
-      idUser: 3,
+      email: 3,
       mostSellProd: 3,
       mostSellCat: 3,
       totalPrice: 3
     },
     {
       id: 4,
-      idUser: 4,
+      email: 4,
       mostSellProd: 4,
       mostSellCat: 4,
       totalPrice: 4
@@ -67,10 +67,20 @@ function ReportByUser() {
 
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <ReportByUserForm onSearchReport={(idUser)=>{
+      <ReportByUserForm
+        onCreateReport={(emailUser)=>{
+          setDataTable(RowsReportsByUser2);
+              // const store = new Store();
+              // store.PostReportByUser(emailUser, (response) => {
+              //   setDataTable(response.data);
+              //   nav("/");
+              // });
+            }}
+
+        onSearchReport={(emailUser)=>{
         setDataTable(RowsReportsByUser2);
             // const store = new Store();
-            // store.GetReportByUser(idUser, (response) => {
+            // store.GetReportByUser(emailUser, (response) => {
             //   setDataTable(response.data);
             //   nav("/");
             // });

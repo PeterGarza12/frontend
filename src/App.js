@@ -31,10 +31,10 @@ function App() {
           <Route exact path="/menu/:id"             element={<Menu/>}>             </Route>
           <Route exact path="/cart"                 element={<Cart/>}>             </Route>
           <Route exact path="/product/:id"          element={<Product/>}>          </Route>
-          <Route exact path="/reportByUser/:id"     element={<ReportByUser/>}>     </Route>
-          <Route exact path="/ReportByCategory/:id" element={<ReportByCategory/>}> </Route>
+          <Route exact path="/reportByUser"         element={<ReportByUser/>}>     </Route>
+          <Route exact path="/ReportByCategory"     element={<ReportByCategory/>}> </Route>
           <Route exact path="/ReportGeneral"        element={<ReportGeneral/>}>    </Route>
-          <Route exact path="/ReportByDate"         element={<ReportByDate/>}>    </Route>
+          <Route exact path="/ReportByDate"         element={<ReportByDate/>}>     </Route>
           <Route path="*"                           element={<Error404/>}>         </Route>
         </Routes>
       </Router>

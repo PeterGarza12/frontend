@@ -18,24 +18,29 @@ class ReportByCatForm extends React.Component {
   render() {
     const { idCategory } = this.state
 
-    const handleFormSubmit = (e) => {
+    const handleFormCreate = (e) => {
       e.preventDefault();
+      this.props.onCreateReport(this.state.idCategory);
+    }
 
-        this.props.onSearchReport(this.state.idCategory);
+    const handleFormSearch = (e) => {
+      e.preventDefault();
+      this.props.onSearchReport(this.state.idCategory);
     }
 
     return(
     <div className="ReportByCatForm col-10">
-      <StyledH1>Reporte por ID de la categoría</StyledH1>
-      <StyledForm onSubmit={handleFormSubmit}>
-
-
+      <StyledH1>Reporte por categoría</StyledH1>
+      <StyledForm>
         <StyledLabel>
-          Buscar mediante el id/correo de la categoría
+          Buscar mediante el id de la categoría
           <StyledInput type="text" className="col-12" placeholder="ID de la categoría" value={idCategory} onChange={this.handleidCategoryChange}/>
         </StyledLabel>
 
-        <StyledButton className='col-6' type="submit">
+        <StyledButton className='col-4'  onClick={handleFormCreate}>
+          Crear
+        </StyledButton>
+        <StyledButton className='col-4' onClick={handleFormSearch}>
           Buscar
         </StyledButton>
       </StyledForm>

@@ -62,7 +62,17 @@ function ReportByCategory() {
 
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <ReportByCategoryForm onSearchReport={(idCategory)=>{
+      <ReportByCategoryForm
+        onCreateReport={(idCategory)=>{
+        setDataTable(RowsReportsByCategory2);
+            // const store = new Store();
+            // store.PostReportByCategory(idCategory, (response) => {
+            //   setDataTable(response.data);
+            //   nav("/");
+            // });
+          }}
+
+      onSearchReport={(idCategory)=>{
         setDataTable(RowsReportsByCategory2);
             // const store = new Store();
             // store.GetReportByCategory(idCategory, (response) => {
