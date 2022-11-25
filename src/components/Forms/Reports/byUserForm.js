@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  LabelForm,
-  BtnForm,
-  Proof
-} from '../styles';
+import { StyledH1, StyledForm, StyledLabel, StyledInput, StyledButton } from './styles';
 
 // Formulario con componente de clase
 class ReportByUserForm extends React.Component {
@@ -30,18 +26,19 @@ class ReportByUserForm extends React.Component {
 
     return(
     <div className="ReportByUserForm col-10">
-      <form onSubmit={handleFormSubmit}>
-        <h1>Reporte por ID del usuario</h1>
+      <StyledH1>Reporte por ID del usuario</StyledH1>
+      <StyledForm onSubmit={handleFormSubmit}>
 
-        <LabelForm>
+
+        <StyledLabel>
           Buscar mediante el id/correo del usuario
-          <Proof type="text" className="col-12" placeholder="ID del usuario" value={idUser} onChange={this.handleidUserChange}/>
-        </LabelForm>
+          <StyledInput type="text" className="col-12" placeholder="ID del usuario" value={idUser} onChange={this.handleidUserChange}/>
+        </StyledLabel>
 
-        <BtnForm type="submit">
+        <StyledButton type="submit">
           Buscar
-        </BtnForm>
-      </form>
+        </StyledButton>
+      </StyledForm>
     </div>
     );
   }

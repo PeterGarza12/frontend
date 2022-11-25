@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View } from "../../view/view";
 import { MainTheme } from "../../../utils/colors";
 import Table from "../../../components/PageComponentes/Table/table";
+import { StyledH1 } from "../../../components/Forms/Reports/styles";
 
 /*ESTO ASÍ VA HARDCODEADO, SON LOS TÍTULOS DE LAS COLUMNAS */
 const ColumnsReportsGeneral = (
@@ -32,23 +33,6 @@ const RowsReportsGeneral = (
   ]
 );
 
-const RowsReportsGeneral2 = (
-  [
-    {
-      id: 3,
-      mostSellProd: 3,
-      mostSellCat: 3,
-      totalPrice: 3
-    },
-    {
-      id: 4,
-      mostSellProd: 4,
-      mostSellCat: 4,
-      totalPrice: 4
-    }
-  ]
-);
-
 function ReportGeneral() {
 
   const [dataTable, setDataTable] = useState([]);
@@ -61,6 +45,7 @@ function ReportGeneral() {
   //Según yo no se necesita hacer ninguna búsqueda en este reporte porque es general
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
+      <StyledH1>Reporte General</StyledH1>
       <Table data= {dataTable} column={ColumnsReportsGeneral}></Table>
     </View>
   );

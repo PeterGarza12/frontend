@@ -62,10 +62,10 @@ function ReportByCategory() {
 
   return(
     <View banner= {''} header = {'Header'} theme={MainTheme} >
-      <ReportByCategoryForm onSearchReport={(idUser)=>{
+      <ReportByCategoryForm onSearchReport={(idCategory)=>{
         setDataTable(RowsReportsByCategory2);
             // const store = new Store();
-            // store.GetReportByCategory(idUser, (response) => {
+            // store.GetReportByCategory(idCategory, (response) => {
             //   setDataTable(response.data);
             //   nav("/");
             // });

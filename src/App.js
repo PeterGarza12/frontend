@@ -1,16 +1,18 @@
-import React        from 'react';
+import React            from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Login        from './pages/login/index';
-import Register     from './pages/register';
-import Main         from './pages/main/main';
-import Menu         from './pages/menú';
-import Cart         from './pages/cart';
-import Product      from './pages/product/product';
-import Test         from './pages/test/test';
-import Error404     from './pages/404/index'
-import Profile      from './pages/profile';
-import ReportByUser from './pages/reports/reportByUser/reportByUser';
+import Login            from './pages/login/index';
+import Register         from './pages/register';
+import Main             from './pages/main/main';
+import Menu             from './pages/menú';
+import Cart             from './pages/cart';
+import Product          from './pages/product/product';
+import Test             from './pages/test/test';
+import Error404         from './pages/404/index'
+import Profile          from './pages/profile';
+import ReportByUser     from './pages/reports/reportByUser/reportByUser';
 import ReportByCategory from './pages/reports/reportByCat/reportByCat';
+import ReportGeneral    from './pages/reports/reportGeneral/reportGeneral';
+import ReportByDate     from './pages/reports/reportByDate/reportByDate';
 
 import './App.css';
 
@@ -31,6 +33,8 @@ function App() {
           <Route exact path="/product/:id"          element={<Product/>}>          </Route>
           <Route exact path="/reportByUser/:id"     element={<ReportByUser/>}>     </Route>
           <Route exact path="/ReportByCategory/:id" element={<ReportByCategory/>}> </Route>
+          <Route exact path="/ReportGeneral"        element={<ReportGeneral/>}>    </Route>
+          <Route exact path="/ReportByDate"         element={<ReportByDate/>}>    </Route>
           <Route path="*"                           element={<Error404/>}>         </Route>
         </Routes>
       </Router>
