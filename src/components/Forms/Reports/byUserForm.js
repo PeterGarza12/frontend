@@ -28,13 +28,10 @@ class ReportByUserForm extends React.Component {
     <div className="ReportByUserForm col-10">
       <StyledH1>Reporte por ID del usuario</StyledH1>
       <StyledForm onSubmit={handleFormSubmit}>
-
-
         <StyledLabel>
           Buscar mediante el id/correo del usuario
           <StyledInput type="text" className="col-12" placeholder="ID del usuario" value={idUser} onChange={this.handleidUserChange}/>
         </StyledLabel>
-
         <StyledButton type="submit">
           Buscar
         </StyledButton>
