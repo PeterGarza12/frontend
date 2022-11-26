@@ -32,7 +32,10 @@ class Product extends React.Component {
             price: response.data.price,
             image: response.data.image,
             category: response.data.idCategory
-          }, (respuesta)=>{new Store().UpdateSugg(userid, this.state.category, (respuesta)=>{});});
+          }, (respuesta)=>{
+            new Store().UpdateSugg(userid, this.state.category, (respuesta)=>{});
+            new Store().UpdateTop(id, (respuesta)=>{console.log(respuesta)});
+          });
 
         },
       });

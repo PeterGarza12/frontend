@@ -20,10 +20,23 @@ export class ListOfProducts extends Component {
 
   async componentDidMount() {
     var userid = store2.get('USERID');
+    var productos=[];
     try {
       if(this.state.type===0){
 
         //Get de productos populares
+        new Store().GetTop((respuesta)=>{
+          respuesta.topProducts.forEach(element => {
+            new Store().getProduct(element.id, {callback: (respuesta)=>{
+
+              productos.push(respuesta.data);
+              this.setState({
+                products: productos
+              });
+            }});
+
+          });
+        })
 
       } else if (this.state.type===1){
         new Store().GetSugg(userid, (respuesta)=>{

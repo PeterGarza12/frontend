@@ -40,24 +40,6 @@ const RowsReportsByUser = (
   ]
 );
 
-const RowsReportsByUser2 = (
-  [
-    {
-      id: 3,
-      idUser: 3,
-      email: 3,
-      username: 3,
-      totalPrice: 3
-    },
-    {
-      id: 4,
-      idUser: 4,
-      email: 4,
-      username: 4,
-      totalPrice: 4
-    }
-  ]
-);
 
 function ReportByUser() {
 

@@ -268,5 +268,26 @@ export default class Store {
     });
   }
 
+  UpdateTop(id, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/top/'+id,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  GetTop(callback) {
+    this.api.Request({
+      method: 'GET',
+      url: '/top/',
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+
 }
 
