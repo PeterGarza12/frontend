@@ -42,8 +42,7 @@ export default class Store {
         password: password,
         email: email,
         role: ["user"],
-        phone: phone,
-        image: "http://placeimg.com/333/333"
+        phone: phone
       },
       headers: this.headersLogin,
       callback: callback,
