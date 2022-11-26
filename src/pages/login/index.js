@@ -54,6 +54,8 @@ function Login(){
               store2.set('TOKEN', response.token);
               store2.set('USERID', response.data._id);
               store2.set('USERNAME', response.data.username);
+              store2.set('ROLE', response.data.role);
+              store2.set('EMAIL', response.data.email);
               nav("/");
             });
           }}></LoginForm>

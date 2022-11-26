@@ -23,25 +23,29 @@ export const View = (props) => {
   const store = store2.get('TOKEN');
   const id = store2.get('USERID');
   const user = store2.get('USERNAME');
+  var role = store2.get('ROLE');
+
   var logeado = false;
   if(id==null){
     logeado=false;
+    role =[""];
   } else {
     logeado=true;
+
   }
 
-  // useEffect(() => {
-  //   if (id===null && (props.page===null || props.page===undefined)){
-  //    nav("/login")
-  //   }
-  // },[])
+  useEffect(() => {
+    if (id===null && (props.page===null || props.page===undefined)){
+     nav("/login")
+    }
+  },[])
 
   return(
     <MainContainer fluid bgImg = {pageColors[props.theme].bgImg}>
       <Row>
         {
           props.header === 'Header' ? (
-            <Header theme={props.theme} items={navbaritems} logged ={logeado} username={user}></Header>
+            <Header theme={props.theme} items={navbaritems} logged ={logeado} username={user} role={role}></Header>
           ) : (
             <div></div>
           )

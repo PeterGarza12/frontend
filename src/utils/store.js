@@ -204,12 +204,13 @@ export default class Store {
     });
   }
 
-  AddSale(userid, products, price, date, callback) {
+  AddSale(userid, email, products, price, date, callback) {
     this.api.Request({
       method: 'POST',
       url: '/sales/',
       data: {
         userid: userid,
+        email: email,
         products: products,
         price: price,
         date: date
@@ -219,5 +220,53 @@ export default class Store {
     });
   }
 
+  GetSalesByUser(email, callback) {
+    this.api.Request({
+      method: 'GET',
+      url: '/sales/user/'+email,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  PostReportByUser(idUser, email, totalSales, totalPrice, date, callback) {
+    this.api.Request({
+      method: 'POST',
+      url: '/reportsUser/',
+      data: {
+        idUser: idUser,
+        email: email,
+        totalSales: totalSales,
+        totalPrice: totalPrice,
+        date: date
+      },
+      headers: this.headersLogin,
+      callback: callback,
+    });
+  }
+
+  GetReportGral(callback) {
+    this.api.Request({
+      method: 'GET',
+      url: '/reportsUser/',
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  GetReportByUser(email, callback) {
+    this.api.Request({
+      method: 'GET',
+      url: '/reportsUser/'+email,
+      data: {
+        email: email,
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
 
 }
+

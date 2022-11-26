@@ -15,7 +15,7 @@ import logo from "../../../res/logoheader.png"
 import { useNavigate } from "react-router-dom";
 import store2 from 'store2';
 
-export const Header = ({ theme, items, logged, searchbar, username }) => {
+export const Header = ({ theme, items, logged, searchbar, username, role }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const showDropdown = (e)=>{
@@ -67,6 +67,14 @@ export const Header = ({ theme, items, logged, searchbar, username }) => {
                   </DropdownMenu>
               </HoverDropdown>
             </TopNavLink>
+
+            {role.includes("admin") ? (
+            <TopNavLink
+                onClick={()=>{nav("/reportByUser")}}
+              >
+                Reportes
+              </TopNavLink>
+            ):(<div></div>)}
 
           {searchbar ? (
             <Col md="2">

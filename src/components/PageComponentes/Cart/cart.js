@@ -118,8 +118,9 @@ class CartC extends React.Component {
       }
       if(bandera===true){
         var userid = store2.get('USERID');
+        var email = store2.get('EMAIL');
         const store = new Store();
-        store.AddSale(userid, this.state.productList, this.state.total,this.state.date, (response) => {
+        store.AddSale(userid, email, this.state.productList, this.state.total,this.state.date, (response) => {
 
           store.CleanCart(userid, (respuesta)=>{
             window.location.replace("/");
