@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import React from 'react';
+import React, {useEffect} from 'react';
 import { ProductCart } from './productCart';
 
 export class ListOfCart extends React.Component {
@@ -17,7 +17,6 @@ export class ListOfCart extends React.Component {
     console.log(this.props);
 
   }
-
 
   render() {
     var productscart = this.state.productscart || [];

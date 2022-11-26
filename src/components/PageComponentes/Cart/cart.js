@@ -30,21 +30,28 @@ class CartC extends React.Component {
   async componentDidMount() {
     var userid = store2.get('USERID');
     var productos = [];
+    var pretotal = 0;
     try {
       new Store().GetCart(userid, {
         callback: async (response) => {
           this.setState({
             products : response.data.products
           }, (respuesta)=>{
-            console.log(this.state.products)
+
             this.state.products.forEach(element => {
               new Store().getProduct(element.id, {callback: (respuesta)=>{
 
+                respuesta.data["amount"]=element.amount;
+                pretotal+=respuesta.data["price"]*element.amount;
+                console.log('Precio', respuesta.data["price"]);
+                console.log('Cantidad', element.amount);
+                console.log('Pretotal', pretotal);
+
                 productos.push(respuesta.data);
                 this.setState({
-                  productList: productos
+                  productList: productos,
+                  total: pretotal
                 });
-                console.log('Adentro', this.state.productList);
               }});
 
             });
@@ -69,8 +76,8 @@ class CartC extends React.Component {
 
   render(){
     var products = this.state.productList || [];
+    var total = this.state.total || [];
 
-    console.log('Render', products);
     return(
       <ContainerCart className="Aquí está lo del carrito col-10">
 
@@ -85,7 +92,7 @@ class CartC extends React.Component {
           <TotalSection className="d-flex flex-column">
             <TotalCart className="d-flex flex-row">
               <div>total:      $</div>
-              <div>1000</div>
+              <div>{total}</div>
             </TotalCart>
             <PayCartBtn>Pagar</PayCartBtn>
           </TotalSection>

@@ -24,7 +24,7 @@ export const ProductCart = ({ _id, name, image, price, amount }) => {
         <div className='d-flex flex-row'>
           <CartProductBtn>Eliminar</CartProductBtn>
             <label for="cantidad">Cantidad: </label>
-            <div name='cantidad'>{amount}</div>
+            <div style={{"margin-left":"10px"}} name='cantidad'>{amount}</div>
         </div>
       </CartProductInfo>
     </CartCard>
