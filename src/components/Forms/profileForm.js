@@ -27,7 +27,6 @@ class ProfileForm extends React.Component {
     try {
       new Store().getProfile(userid, {
         callback: async (response) => {
-          console.log('response', response);
             this.setState({
               userid: userid,
               username: response.data.username,
@@ -38,7 +37,7 @@ class ProfileForm extends React.Component {
         },
       });
     } catch (error) {
-      console.log(error);
+
     }
   }
 

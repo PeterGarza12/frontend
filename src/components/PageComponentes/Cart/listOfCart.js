@@ -12,8 +12,7 @@ export class ListOfCart extends React.Component {
 
   render() {
     var productscart = this.props.cart || [];
-    console.log('ListOfCart',productscart);
-    return (
+        return (
       productscart.map((x, i) => (
         <div className='col col-sm' key={i}>
           <ProductCart image={x.image} {...x}></ProductCart>

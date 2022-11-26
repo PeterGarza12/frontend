@@ -9,7 +9,6 @@ class ReportByDateForm extends React.Component {
     var year = d.getFullYear();
     var month = d.getMonth()+1;
     var day = d.getDate();
-    console.log(day, month);
     var out = year + '-' + month + '-' + day;
 
     this.state = {
@@ -30,14 +29,14 @@ class ReportByDateForm extends React.Component {
     const handleFormCreate = (e) => {
       e.preventDefault();
 
-      console.log(initDate);
+
       this.props.onCreateReport(this.state.initDate);
     }
 
     const handleFormSearch = (e) => {
       e.preventDefault();
 
-      console.log(initDate);
+
       this.props.onSearchReport(this.state.initDate);
     }
 

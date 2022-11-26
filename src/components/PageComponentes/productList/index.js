@@ -48,7 +48,6 @@ export class ListOfProducts extends Component {
     var text = this.state.text || [];
     var text2 = this.state.text2 || [];
 
-    //console.log('Products2', products);
     return (
       <ListContainer className='d-flex flex-column flex-lg-row col-12'>
         <DetailCont className='col-12 col-lg-2 align-items-center align-items-lg-start' fluid>

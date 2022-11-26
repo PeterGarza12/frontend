@@ -11,7 +11,7 @@ margin-bottom: 20px;
 export const TotalSection = styled.div`
 background-color: white;
 color: black;
-max-height: 200px;
+max-height: 500px;
 padding: 15px;
 border-radius: 8px;
 font-variant-caps: all-small-caps;

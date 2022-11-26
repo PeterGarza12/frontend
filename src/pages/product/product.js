@@ -22,7 +22,6 @@ class Product extends React.Component {
   async componentDidMount() {
     const id = window.location.href.split('/')[4]
     var userid = store2.get('USERID');
-    console.log(id);
     try {
       new Store().getProduct(id, {
         callback: async (response) => {

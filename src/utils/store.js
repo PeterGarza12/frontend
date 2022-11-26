@@ -195,4 +195,20 @@ export default class Store {
     });
   }
 
+  AddSale(userid, products, price, date, callback) {
+    this.api.Request({
+      method: 'POST',
+      url: '/sales/',
+      data: {
+        userid: userid,
+        products: products,
+        price: price,
+        date: date
+      },
+      headers: this.headersLogin,
+      callback: callback,
+    });
+  }
+
+
 }

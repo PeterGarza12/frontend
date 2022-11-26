@@ -16,7 +16,6 @@ export const ProductView = ({ id, name, price, description, image }) => {
   const handleAmountChange = (e) => {
     const { value } = e.target
     amount=value;
-    console.log(amount);
   }
 
   const handleFormSubmit = (e) => {
