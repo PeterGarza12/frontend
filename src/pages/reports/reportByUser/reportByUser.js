@@ -88,7 +88,7 @@ function ReportByUser() {
     <View banner= {''} header = {'Header'} theme={MainTheme} >
       <ReportByUserForm
         onCreateReport={(emailUser)=>{
-
+//
           var pretotal = 0;
           const store = new Store();
           store.GetSalesByUser(emailUser, (response)=>{
