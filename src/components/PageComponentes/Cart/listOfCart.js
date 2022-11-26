@@ -10,9 +10,18 @@ export class ListOfCart extends React.Component {
     };
   }
 
+  async componentDidMount() {
+      this.setState({
+        productscart: this.props.productscart,
+      });
+    console.log(this.props);
+
+  }
+
+
   render() {
     var productscart = this.state.productscart || [];
-
+    console.log('ListOfCart',productscart);
     return (
       productscart.map((x, i) => (
         <div className='col col-sm' key={i}>

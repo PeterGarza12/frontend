@@ -27,6 +27,7 @@ class Product extends React.Component {
       new Store().getProduct(id, {
         callback: async (response) => {
           this.setState({
+            id: id,
             name: response.data.name,
             desc: response.data.description,
             price: response.data.price,
@@ -50,42 +51,15 @@ class Product extends React.Component {
 
       <View banner= {''} header = {'Header'} theme={MainTheme} >
         <div>
-        <ProductView name={this.state.name} description={this.state.desc} price={this.state.price}
-        image={this.state.image}></ProductView>
+        <ProductView id={this.state.id} name={this.state.name} description={this.state.desc} price={this.state.price}
+        image={this.state.image}
+
+        ></ProductView>
 
         </div>
       </View>
     );
   }
 }
-// function Product(){
-//   const { id } = useParams();
-//  // var product = useRef(null);
-//   const [producto, setProduct]=useState();
-
-  // useEffect(() => {
-  //   try {
-  //     new Store().getProduct(id, {
-  //       callback: async (response) => {
-  //         //product.current=response.data;
-  //         setProduct(response.data);
-  //       },
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // })
-
-  // return(
-
-  //   <View banner= {''} header = {'Header'} theme={MainTheme} >
-  //     <div>
-  //     <ProductView name={producto.name} description={producto.description} price={producto.price}
-  //     image={producto.image}></ProductView>
-
-  //     </div>
-  //   </View>
-  // );
-// }
 
 export default Product;

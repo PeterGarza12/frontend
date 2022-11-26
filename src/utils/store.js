@@ -147,4 +147,39 @@ export default class Store {
   getCategories({ data = {}, callback }) {
     this.SimpleRequest('GET', '/categories', data, callback);
   }
+
+  CreateCart(userid, callback) {
+    this.api.Request({
+      method: 'POST',
+      url: '/cart/',
+      data: {
+        userid: userid
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  AddCart(userid, products, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/cart/'+userid,
+      data: {
+        products: products
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  GetCart(userid, {callback}){
+    this.api.Request({
+      method: 'GET',
+      url: '/cart/user/'+userid,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
 }

@@ -52,6 +52,7 @@ function Register(){
             const store = new Store();
             store.SignUp(email, username, password, phone, (response) => {
               store.CreateSugg(response.data._id, 1, (respuesta)=>{});
+              store.CreateCart(response.data._id, (respuesta)=>{});
               nav("/login");
             });
           }}></RegisterForm>

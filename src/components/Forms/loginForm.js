@@ -31,8 +31,6 @@ class LoginForm extends React.Component {
 
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      /*****Agregar validaciones de que el correo y contraseña estén bien escritos y todo eso ******/
-      //alert(`Usuario: ${email} Password: ${password}`);
 
       let expresion = new RegExp(/(^[a-zA-Z0-9\-_]{8}$)/);
       if(this.state.password.match(expresion)===null)

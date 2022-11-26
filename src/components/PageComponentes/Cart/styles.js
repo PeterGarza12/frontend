@@ -93,14 +93,13 @@ color: white;
 export const CartProductBtn = styled.button`
 border: none;
 margin-right: 10px;
-background-color: transparent ;
+background-color: black ;
 color: white;
-transform: all 300ms;
+border-radius: 8px;
+transition: all 300ms;
 
 &:hover{
-  background-color: #ff2929;
-  color:#ff2929;
-  border-bottom: 1px solid #ff2929;
-  background: none;
+  background-color: white;
+  color:black;
 }
 `;

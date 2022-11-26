@@ -17,8 +17,8 @@ export default class API {
   }) {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
-      console.log('READYSTATE', this.readyState)
-      console.log('STATUS', this.status)
+      //console.log('READYSTATE', this.readyState)
+      //console.log('STATUS', this.status)
       if (this.readyState == 4 && this.status == 200) {
         callback(JSON.parse(this.response));
       }
