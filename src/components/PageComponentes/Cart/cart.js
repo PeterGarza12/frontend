@@ -5,6 +5,7 @@ import Store from '../../../utils/store';
 import store2 from 'store2';
 import {StyledForm, StyledLabel, StyledInput, StyledButton } from '../../Forms/Reports/styles';
 import store from "store2";
+import { useNavigate } from "react-router-dom";
 
 import {
   ContainerCart,
@@ -99,6 +100,7 @@ class CartC extends React.Component {
   handleFormPay = (e) => {
     var bandera = true;
     var aviso="Los siguientes datos son inválidos: ";
+    // let nav = useNavigate();
 
     e.preventDefault();
     let cardRegex = new RegExp(/(^[\d]{16}$)/);
@@ -118,11 +120,14 @@ class CartC extends React.Component {
         var userid = store2.get('USERID');
         const store = new Store();
         store.AddSale(userid, this.state.productList, this.state.total,this.state.date, (response) => {
-          // store.CreateSugg(response.data._id, 1, (respuesta)=>{});
-          // store.CreateCart(response.data._id, (respuesta)=>{});
-          // nav("/login");
+
+          store.CleanCart(userid, (respuesta)=>{
+            window.location.replace("/");
+          });
+
           console.log(response);
         });
+
       } else {
         alert(aviso);
         return;

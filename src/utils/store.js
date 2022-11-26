@@ -184,11 +184,20 @@ export default class Store {
     });
   }
 
-
   GetCart(userid, {callback}){
     this.api.Request({
       method: 'GET',
       url: '/cart/user/'+userid,
+      data: {},
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+  CleanCart(userid, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/cart/clean/'+userid,
       data: {},
       headers: this.headers,
       callback: callback,
