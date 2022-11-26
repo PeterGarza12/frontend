@@ -69,8 +69,13 @@ function ReportByUser() {
   var day = d.getDate();
   var date = year + '-' + month + '-' + day;
 
+  const role = store.get('ROLE');
+
   useEffect(() => {
     const store = new Store();
+    if (!role.includes("admin")){
+     nav("/")
+    }
     store.GetReportGral((response) => {
       console.log(response.reportsUser);
       setDataTable(response.reportsUser);

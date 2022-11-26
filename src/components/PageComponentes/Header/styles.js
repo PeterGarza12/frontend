@@ -105,3 +105,24 @@ export const HeaderImg = styled(CardImg)`
   display: block;
   height: 30px;
 `;
+
+export const CartBtn = styled.a`
+  float: right;
+  background-color: transparent;
+  color: white ;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: all 300ms;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  &:hover {
+    background-color: #d9d9d9 ;
+    color: black;
+  }
+`;
