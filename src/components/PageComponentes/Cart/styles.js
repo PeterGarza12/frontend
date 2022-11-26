@@ -88,6 +88,7 @@ export const CartProductTitle = styled.div`
 font-size: 25px;
 font-weight: bold;
 color: white;
+cursor: pointer;
 `;
 
 export const CartProductBtn = styled.button`

@@ -172,6 +172,19 @@ export default class Store {
     });
   }
 
+  DeleteFromCart(userid, productid, callback) {
+    this.api.Request({
+      method: 'PATCH',
+      url: '/cart/delete/'+userid,
+      data: {
+        productid: productid
+      },
+      headers: this.headers,
+      callback: callback,
+    });
+  }
+
+
   GetCart(userid, {callback}){
     this.api.Request({
       method: 'GET',

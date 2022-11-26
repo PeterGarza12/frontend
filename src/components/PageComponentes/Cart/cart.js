@@ -10,13 +10,6 @@ import {
   PayCartBtn
 } from "./styles";
 
-
-var listCart = (
-  [
-
-    ]
-);
-
 class CartC extends React.Component {
   constructor() {
     super();
@@ -77,6 +70,7 @@ class CartC extends React.Component {
   render(){
     var products = this.state.productList || [];
     var total = this.state.total || [];
+    console.log(products);
 
     return(
       <ContainerCart className="Aquí está lo del carrito col-10">
@@ -86,7 +80,7 @@ class CartC extends React.Component {
         <div className="d-flex flex-column-reverse flex-md-row">
 
           <div className="d-flex flex-column col-12 col-md-8">
-            <ListOfCart productscart={products}></ListOfCart>
+            <ListOfCart cart={products}></ListOfCart>
             </div>
 
           <TotalSection className="d-flex flex-column">
