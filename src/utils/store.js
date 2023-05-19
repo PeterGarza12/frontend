@@ -1,6 +1,9 @@
 import store from 'store2';
 import API from './../utils/api';
+
+
 export default class Store {
+
   constructor() {
     const TOKEN = store.get('TOKEN');
     this.api = new API();
